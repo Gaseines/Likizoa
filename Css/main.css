@@ -1,0 +1,187 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: Muli,Helvetica,Arial,sans-serif;
+}
+ul{ 
+    padding: 0px!important;
+    margin-top: 0px!important;
+}
+.menu_principal{
+    width: 1784px;
+    background-color: rgb(207, 207, 207);
+    height: 72px;
+    padding: 2px;
+    margin: 0 auto;
+}
+main{
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
+.logo{
+    padding: 7px;
+    width: 5%;
+    float: left;  
+}
+.txt-logo{ padding: 20px;
+    width: 60%;
+    float: left;
+    font-size: 30px;
+    color: #004673;
+    margin-left: 8%;
+}
+.header-2{ 
+    width: 980px; 
+    margin-top: 27px;
+    margin-left: 35%;
+    font-family: LEMON MILK;
+    
+}
+.menu-urls{
+    border-bottom: 3px solid #0047737c;
+    background-color: #007AC2;
+    height: 80px;
+    
+}
+.menu ul li{
+    display: inline-block;
+    color: black;
+    margin-left: 30px;  
+    cursor: pointer;
+    height: 53px;
+}
+.menu ul li:hover{
+    border-bottom: 3px solid #1CBCFF;
+}
+.menu ul li a:hover{
+    color: #2FF5E4;
+}
+
+.menu ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.col-100 {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.Introdução{
+    background:url(../img/imagem_site.jpg);
+    width: 100%;
+    background-size: cover;
+    height: 822px;
+}
+.header-3{ float: left;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    margin-left: 0%;
+    margin-top: 10%;
+}
+.txt-in{
+    color: rgb(126, 126, 126);
+    text-decoration: none;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;  
+}
+.cj{
+    background-color: #142B40;
+    text-align: center;
+    
+}
+.controle-de-jornada p{
+    color: #D9D9D9;
+    font-size: 18px;
+}
+.controle-de-jornada h1{
+    color: white;
+    font-size: 50px;
+}
+.controle-de-jornada h3{
+    font-size: 26px;
+    color: white;
+}
+.col-3{
+    width: 28.3%;
+    float: left;
+    position: relative;
+    padding-left: 28px;
+    padding-right: 15px;
+    text-align: center;
+}
+.col-3 img{
+    width: 80px;
+    height: 80px;
+}
+.arq img{
+    height: 80px;
+    width: 64px;
+}
+.cad img{
+    width: 64px;
+    height: 81px;
+}
+.controle-de-jornada{
+    margin-top: 3em;
+}
+.bloco-texto{
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+.empresa{
+    text-align: center;
+    color: #053b83;
+    margin-top: 9em;
+    margin-bottom: 9em;
+}
+.empresa h1{
+    font-size: 40px;
+}
+.empresa p{
+    font-size: 18px;
+
+}
+.logo-branca img{
+    width: 600px;
+    height: 208px;
+}
+.contato{
+    background-color: #3D3D3D;
+    color: white;
+}
+.seta-branca img{
+    margin-bottom: 82px;
+    margin-top: -117px;
+}
+.tele img{
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    float: left;
+    margin-left: 362px;
+    margin-top: 31px;
+
+}
+.tele h2{
+    padding: 3px;
+    float: right;
+    margin-right: 410px;
+    margin-top: 32px;
+    font-size: 40px;
+}
+.nomes{
+    background-color: #3D3D3D;
+    color: white;
+}
+.eve{
+float: left;
+padding-bottom: 30px;
+}
+.jae{
+    float: right;
+}
