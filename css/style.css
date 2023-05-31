@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 98vw;
+    height: 100vh;
+   
+}
+
+ul{
+    list-style: none;
+}
+
+menu{
+    height: 100%;
+    min-width: 286px;
+    background-color: #343A40;
+    position: right;
+    width: calc(218px + 16px);
+    position: absolute;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+img{
+    width: 200px;
+    padding: 15px;
+    margin-left: 25px;
+
+}
+
+
+.btn-menu{
+    text-decoration: none;
+    color: #737373;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2em;
+    
+}
+
+.btn-menu:hover{
+    color: #999999;
+}
+
+.btn-after::after{
+    content: "\f105";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    font-size: 0.9em;
+    float: right;
+}
+
+.btn-after-open::after{
+    content: "\f107";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    font-size: 0.9em;
+    float: right;
+}
+
+.btn-sub-menu{
+    text-decoration: none;
+    color: #979b9e;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-left: 50px;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    
+}
+.btn-sub-menu:hover{
+    color: #bdc1c4;
+}
+
+#dash-sub{
+    display: none;
+}
+#cadasSub{
+    display: none;
+}
+
+
+
+
