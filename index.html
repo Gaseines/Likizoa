@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="css/stylePrincipal.css">
+    <link rel="stylesheet" href="css/styleScreens.css">
+
+    <script src="script/scriptMenu.js" defer></script>
+    <script src="script/scriptContainer.js" defer></script>
     <title>Jornada</title>
 </head>
 <body>
@@ -18,45 +21,48 @@
                 <span class="material-symbols-outlined">speed</span>
                 <sup>Dashboard</sup>
             </a></li>
-            <ul id="dash-sub">
-                <li><a href="#" class="btn-sub-menu">
-                    Resumo Jornada
-                </a></li>
-                <li><a href="#" class="btn-sub-menu">Jornada por motorista</a></li>
-            </ul>
-            <li><a href="#" class="btn-menu btn-after" id="btnCadastro"><span class="material-symbols-outlined">calendar_month</span>
+            <!--Sub Dashboard-->
+                <ul id="dash-sub">
+                    <li><a href="#" class="btn-sub-menu">
+                        Resumo Jornada
+                    </a></li>
+                    <li><a href="#" class="btn-sub-menu">Jornada por motorista</a></li>
+                </ul>
+            
+            <li><a href="#" class="btn-menu btn-after" id="btn-cadastro"><span class="material-symbols-outlined">calendar_month</span>
                 <sup>Cadastros</sup> 
             </a></li>
-            <ul id="cadasSub">
-                <li><a href="" class="btn-sub-menu">Empresas</a></li>
-                <li><a href="" class="btn-sub-menu">Usuários</a></li>
-                <li><a href="" class="btn-sub-menu">Estados</a></li>
-                <li><a href="" class="btn-sub-menu">Cidades</a></li>
-                <li><a href="" class="btn-sub-menu">Pessoa</a></li>
-                <li><a href="" class="btn-sub-menu">Feriados</a></li>
-                <li><a href="" class="btn-sub-menu">Sindicatos</a></li>
-                <li><a href="" class="btn-sub-menu">Veículos</a></li>
-                <li><a href="" class="btn-sub-menu">Tipo Doc. Pess</a></li>
-                <li><a href="" class="btn-sub-menu">Operação Frota</a></li>
-                <li><a href="" class="btn-sub-menu">Referências</a></li>
-                <li><a href="" class="btn-sub-menu">Desconsiderar referência</a></li>
-                <li><a href="" class="btn-sub-menu">Motorista veículo</a></li>
-                <li><a href="" class="btn-sub-menu">Config adic jornada</a></li>
-                <li><a href="" class="btn-sub-menu">Região</a></li>
-                <li><a href="" class="btn-sub-menu">Transferência Jornada</a></li>
-                <li><a href="" class="btn-sub-menu">Config diária</a></li>
-                <li><a href="" class="btn-sub-menu">Diária cidade residência</a></li>
-                <li><a href="" class="btn-sub-menu">Parâmetros jornada</a></li>
-                <li><a href="" class="btn-sub-menu">Login motorista veículo</a></li>
-                <li><a href="" class="btn-sub-menu">Ajustar horas totalizador</a></li>
-                <li><a href="" class="btn-sub-menu">Liberação período</a></li>
-                <li><a href="" class="btn-sub-menu">Ajuste manual de diária</a></li>
-                <li><a href="" class="btn-sub-menu">Ajuste na ficha ponto</a></li>
-                <li><a href="" class="btn-sub-menu">Valid smartphone</a></li>
-                <li><a href="" class="btn-sub-menu">Cidades residência</a></li>
-                <li><a href="" class="btn-sub-menu">Config jornada fixa</a></li>
-                <li><a href="" class="btn-sub-menu">Jornada fixa</a></li>
-                <li><a href="" class="btn-sub-menu">Ajustes gerais</a></li>
+            <!--Sub Cadastro-->
+            <ul id="cadas-sub">
+                <li><a class="btn-sub-menu" onclick="mostrarContainer('container-empresas')">Empresas</a></li>
+                <li><a class="btn-sub-menu">Usuários</a></li>
+                <li><a class="btn-sub-menu">Estados</a></li>
+                <li><a class="btn-sub-menu">Cidades</a></li>
+                <li><a class="btn-sub-menu">Pessoa</a></li>
+                <li><a class="btn-sub-menu">Feriados</a></li>
+                <li><a class="btn-sub-menu">Sindicatos</a></li>
+                <li><a class="btn-sub-menu">Veículos</a></li>
+                <li><a class="btn-sub-menu">Tipo Doc. Pess</a></li>
+                <li><a class="btn-sub-menu">Operação Frota</a></li>
+                <li><a class="btn-sub-menu">Referências</a></li>
+                <li><a class="btn-sub-menu">Desconsiderar referência</a></li>
+                <li><a class="btn-sub-menu">Motorista veículo</a></li>
+                <li><a class="btn-sub-menu">Config adic jornada</a></li>
+                <li><a class="btn-sub-menu">Região</a></li>
+                <li><a class="btn-sub-menu">Transferência Jornada</a></li>
+                <li><a class="btn-sub-menu">Config diária</a></li>
+                <li><a class="btn-sub-menu">Diária cidade residência</a></li>
+                <li><a class="btn-sub-menu">Parâmetros jornada</a></li>
+                <li><a class="btn-sub-menu">Login motorista veículo</a></li>
+                <li><a class="btn-sub-menu">Ajustar horas totalizador</a></li>
+                <li><a class="btn-sub-menu">Liberação período</a></li>
+                <li><a class="btn-sub-menu">Ajuste manual de diária</a></li>
+                <li><a class="btn-sub-menu">Ajuste na ficha ponto</a></li>
+                <li><a class="btn-sub-menu">Valid smartphone</a></li>
+                <li><a class="btn-sub-menu">Cidades residência</a></li>
+                <li><a class="btn-sub-menu">Config jornada fixa</a></li>
+                <li><a class="btn-sub-menu">Jornada fixa</a></li>
+                <li><a class="btn-sub-menu">Ajustes gerais</a></li>
                 
             </ul>
             <li><a href="#" class="btn-menu"><span class="material-symbols-outlined">local_shipping</span>
@@ -71,22 +77,99 @@
             <li><a href="#" class="btn-menu"><span class="material-symbols-outlined">calendar_month</span>
                 <sup>Folgas</sup>
             </a></li>
-            <li><a href="#" class="btn-menu btn-after"><span class="material-symbols-outlined">calculate</span>
+            <li><a href="#" class="btn-menu btn-after" id="btn-logistica"><span class="material-symbols-outlined">calculate</span>
                 <sup>Logística</sup>
             </a></li>
+            <!--Sub Logistica-->
+            <ul id="log-sub">
+                <li><a class="btn-sub-menu">Localizações</a></li>
+                <li><a class="btn-sub-menu">Macros smartphone</a></li>
+                <li><a class="btn-sub-menu">Rotas</a></li>
+                <li><a class="btn-sub-menu">Localização atual</a></li>
+                <li><a class="btn-sub-menu">Perda de posições</a></li>
+                <li><a class="btn-sub-menu">KM percorrido</a></li>
+                <li><a class="btn-sub-menu">Veículos sem integração</a></li>
+                <li><a class="btn-sub-menu">Posições atrasadas</a></li>
+            </ul>
             <li><a href="#" class="btn-menu"><span class="material-symbols-outlined">draft</span>
                 <sup>Importação</sup>
             </a></li>
-            <li><a href="#" class="btn-menu btn-after"><span class="material-symbols-outlined">draft</span>
+            <li><a href="#" class="btn-menu btn-after" id="btn-exportacao"><span class="material-symbols-outlined">draft</span>
                 <sup>Exportação</sup>
             </a></li>
+            <!--Sub Exportação-->
+            <ul id="ex-sub">
+                <li><a class="btn-sub-menu">Exportar horas</a></li>
+                <li><a class="btn-sub-menu">Parâmetros</a></li>
+            </ul>
             <li><a href="#" class="btn-menu"><span class="material-symbols-outlined">phone_iphone</span>
                 <sup>Habilitar smartphone</sup>
             </a></li>
-            <li><a href="#" class="btn-menu"><span class="material-symbols-outlined">calculate</span>
+            <li><a href="#" class="btn-menu btn-after" id="btn-gr"><span class="material-symbols-outlined">calculate</span>
                 <sup>GR</sup>
             </a></li>
+            <!--Sub GR-->
+            <ul id="gr-sub">
+                <li><a class="btn-sub-menu">Paradas autorizadas</a></li>
+            </ul>
         </ul>
     </menu>
+
+    <div id="container-empresas" class="container">
+        <div style="border-bottom: 1px solid #022150;"><b>Empresas</b></div>
+        <br>
+        <div class="div-btn-nav-prin">
+            <a class="btn-nav-prin">
+                Novo
+            </a>
+            <a class="btn-nav-prin">
+                <sub><span class="material-symbols-outlined" style="font-size: 1.5em;">task</span></sub>
+                Excel
+            </a><a class="btn-nav-prin">
+                <sub><span class="material-symbols-outlined" style="font-size: 1.5em;">draft</span></sub>
+                CSV
+            </a>
+            <p>Nome:</p>
+            <input type="text" name="nome-empresa" id="nomeEmpresa" class="imput-name" placeholder="Nome">
+            <button class="btn-filtrar">Filtrar</button>
+                </div>
+                <div class="container-table">
+                    <table>
+                        
+                            <thead>
+                                <tr>
+                                    <th class="head-table" style="width: 150px;">Outros</th>
+                                    <th class="head-table">Editar</th>
+                                    <th class="head-table">Excluir</th>
+                                    <th class="head-table">Código</th>
+                                    <th class="head-table" style="width: 100px;">Nome</th>
+                                    <th style="width: 350px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        
+                    </table>
+                </div>
+        </div>
+        <div class="container active">
+            
+        </div>
+
+    </div>
+    <script>
+        function mostrarContainer(id) {
+    // Esconder todos os conteúdos
+    let containers = document.querySelectorAll('.container');
+    for (let i = 0; i < containers.length; i++) {
+        containers[i].classList.remove('active');
+    }
+
+    // Exibir o conteúdo selecionado
+    var container = document.getElementById(id);
+    container.classList.add('active');
+}
+    </script>
 </body>
 </html>

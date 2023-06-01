@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos para o menu */
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+
+        /* Estilos para o conteúdo */
+        .conteudo {
+            display: none;
+        }
+
+        .conteudo.active {
+            display: block;
+        }
+    </style>
+</head>
+
+    
+
+<body>
+    <ul class="menu">
+        <li><a href="#" onclick="mostrarConteudo('conteudo1')">Conteúdo 1</a></li>
+        <li><a href="#" onclick="mostrarConteudo('conteudo2')">Conteúdo 2</a></li>
+        <li><a href="#" onclick="mostrarConteudo('conteudo3')">Conteúdo 3</a></li>
+    </ul>
+
+    <div id="conteudo1" class="conteudo active">
+        <h2>Conteúdo 1</h2>
+        <p>Texto do conteúdo 1...</p>
+    </div>
+
+    <div id="conteudo2" class="conteudo">
+        <h2>Conteúdo 2</h2>
+        <p>Texto do conteúdo 2...</p>
+    </div>
+
+    <div id="conteudo3" class="conteudo">
+        <h2>Conteúdo 3</h2>
+        <p>Texto do conteúdo 3...</p>
+    </div>
+
+    <script>
+        function mostrarConteudo(id) {
+            // Esconder todos os conteúdos
+            var conteudos = document.querySelector('container');
+            for (var i = 0; i < conteudos.length; i++) {
+                conteudos[i].classList.remove('active');
+            }
+
+            // Exibir o conteúdo selecionado
+            var conteudo = document.getElementById(id);
+            conteudo.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
