@@ -1,77 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Estilos para o menu */
-        .menu {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+  <title>Landing Page do Food Truck/Cafeteria</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Estilos para o header */
+header {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
 
-        .menu li {
-            display: inline-block;
-            margin-right: 10px;
-        }
+header h1 {
+  margin: 0;
+}
 
-        .menu li a {
-            text-decoration: none;
-            color: #333;
-            padding: 5px 10px;
-        }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-        /* Estilos para o conteúdo */
-        .conteudo {
-            display: none;
-        }
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
 
-        .conteudo.active {
-            display: block;
-        }
-    </style>
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilos para as seções */
+section {
+  padding: 50px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+  </style>
 </head>
-
-    
-
 <body>
-    <ul class="menu">
-        <li><a href="#" onclick="mostrarConteudo('conteudo1')">Conteúdo 1</a></li>
-        <li><a href="#" onclick="mostrarConteudo('conteudo2')">Conteúdo 2</a></li>
-        <li><a href="#" onclick="mostrarConteudo('conteudo3')">Conteúdo 3</a></li>
+  <header>
+    <h1>Nome do Food Truck/Cafeteria</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>Descrição da sua cafeteria ou food truck.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu</h2>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
     </ul>
+  </section>
 
-    <div id="conteudo1" class="conteudo active">
-        <h2>Conteúdo 1</h2>
-        <p>Texto do conteúdo 1...</p>
-    </div>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Informações de contato, como telefone e e-mail.</p>
+  </section>
 
-    <div id="conteudo2" class="conteudo">
-        <h2>Conteúdo 2</h2>
-        <p>Texto do conteúdo 2...</p>
-    </div>
+  <footer>
+    <p>&copy; 2023 Nome do Food Truck/Cafeteria. Todos os direitos reservados.</p>
+  </footer>
 
-    <div id="conteudo3" class="conteudo">
-        <h2>Conteúdo 3</h2>
-        <p>Texto do conteúdo 3...</p>
-    </div>
-
-    <script>
-        function mostrarConteudo(id) {
-            // Esconder todos os conteúdos
-            var conteudos = document.querySelector('container');
-            for (var i = 0; i < conteudos.length; i++) {
-                conteudos[i].classList.remove('active');
-            }
-
-            // Exibir o conteúdo selecionado
-            var conteudo = document.getElementById(id);
-            conteudo.classList.add('active');
-        }
-    </script>
+  <script src="script.js"></script>
 </body>
-
 </html>
