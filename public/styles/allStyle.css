@@ -1,0 +1,34 @@
+:root{
+    --azulEscuro: #006CE3;
+    --azulClaro: #0583F2;
+    --preto: #000000;
+    --branco: #ffffff;
+    --vintage: #fdf9e1;
+    --cinza: #c3cef7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--begeEscuro);
+
+    overflow-x: hidden;     
+    z-index: -5;   
+}
+
+.all{
+    
+    margin: auto;
+}
+
+
+@font-face {
+    font-family: 'padrao';
+    src: url(../fonts/coolvetica\ rg\ it.otf);
+}

@@ -1,0 +1,77 @@
+.giraCloseD{
+    animation: giraCloseD 0.3s ease-in-out forwards;
+}
+
+.giraOpenD{
+    animation: giraOpenD 0.3s ease-in-out forwards;
+}
+
+.giraCloseE{
+    animation: giraCloseE 0.3s ease-in-out forwards;
+}
+
+.giraOpenE{
+    animation: giraOpenE 0.3s ease-in-out forwards;
+}
+
+
+
+
+
+@keyframes giraCloseD{
+0%{
+    transform: rotate(0deg);
+    opacity: 1;
+}
+75%{
+    opacity: 1;
+}
+100%{
+    transform: rotate(180deg);
+    opacity: 0;
+    display: none;
+}
+}
+
+@keyframes giraOpenD{
+    0%{
+        transform: rotate(45deg);
+        
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes giraCloseE{
+    0%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(-180deg);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes giraOpenE{
+    0%{
+        transform: rotate(-45deg);
+        
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(-180deg);
+        opacity: 1;
+    }
+}
