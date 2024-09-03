@@ -16,7 +16,7 @@ body{
     width: 100vw;
     height: 100vh;
 
-    background-color: var(--begeEscuro);
+    background-color: var(--vintage);
 
     overflow-x: hidden;     
     z-index: -5;   
