@@ -1,14 +1,14 @@
 .controle_jornada{
-    height: 1000px;
+    
     position: relative;
-    background-color: var(--cinza);
+    background-color: var(--azulClaro);
 }
 
 .down{
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: var(--cinza);
+    background-color: var(--azulClaro);
     border-radius: 50% 50% 0px 0px;
 
     display: flex;
@@ -17,3 +17,34 @@
     top: -45px;
     left: calc(50% - 25px);
 }
+
+.container_escrita{
+    text-align: center;
+    padding: 50px 30px 50px 30px;
+    color: var(--branco);
+}
+
+.titulo_controle_de_jornada{
+    font-family: 'padrao', sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.texto_controle_de_jornada{
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'escrita', serif;
+
+    background-image: url(../img/capa_jornada.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.lei{
+    color: var(--cinza);
+}
+
+.lei:hover{
+    color: var(--azulEscuro);
+}
+

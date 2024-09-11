@@ -4,78 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Likizoa</title>
+    
+    
     <link rel="stylesheet" href="public/styles/menu.css">
     <link rel="stylesheet" href="public/styles/allStyle.css">
     <link rel="stylesheet" href="public/styles/animacoes.css">
     <link rel="stylesheet" href="public/styles/home.css">
     <link rel="stylesheet" href="public/styles/controleJornada.css">
-
+    <link rel="stylesheet" href="public/styles/nossaEmpresa.css">
+    <!-- Importa o arquivo CSS específico para media queries (responsividade) -->
     <link rel="stylesheet" href="public/styles/mediaQuery.css">
 </head>
 <body>
-    <nav class="nav_menu">
-        <div id="header">
-            <a href="#welcome"><img class="img_logo" src="public/img/logo.png"></a>
-            <svg class="burguer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <svg class="fechado" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
-                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-         </div>
-        <menu class="menu"><ul class="lista_menu">
-    
-            <a href="#capa">
-                <li class="itens_menu">Início</li>
-            </a>
-            <a href="">
-                <li class="itens_menu">Nossa Empresa</li>
-            </a>
-            <a href="">
-                <li class="itens_menu">Aplicativo</li>
-            </a>
-            <a href="">
-                <li class="itens_menu">Contato</li>
-            </a>
-            <a href="#nossa_historia">
-                <li class="itens_menu">Sobre</li>
-            </a>
-        </ul></menu>
-    </nav class="nav_menu">
-
-    <main>
-        <div class="capa" id="capa">
-            <div class="home">
-                <div class="nome_home">
-                    <h1>Likizoa</h1>
-                    <p>Serviços e Treinamentos</p>
+    <!-- Barra de navegação contendo o menu -->
+    <div class="all">
+        <nav class="nav_menu">
+            <div id="header">
+                <!-- Logo da empresa com um link para o topo da página -->
+                <a href="#welcome"><img class="img_logo" src="public/img/logo.png"></a>
+                <!-- Ícone de "menu hambúrguer" (3 linhas) usado para abrir o menu em dispositivos móveis -->
+                <svg class="burguer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                    <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <!-- Ícone de "fechar" o menu (um X) que aparece após abrir o menu em dispositivos móveis -->
+                <svg class="fechado" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                    <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+             </div>
+             <!-- Menu de navegação com links para diferentes seções da página -->
+            <menu class="menu">
+                <ul class="lista_menu">
+                    <!-- Link para a seção inicial (Início) -->
+                    <a href="#capa">
+                        <li class="itens_menu">Início</li>
+                    </a>
+                    <!-- Link para a seção da empresa (placeholder, sem referência) -->
+                    <a href="#nossa_empresa">
+                        <li class="itens_menu">Nossa Empresa</li>
+                    </a>
+                    <!-- Link para a seção do aplicativo (placeholder, sem referência) -->
+                    <a href="">
+                        <li class="itens_menu">Aplicativo</li>
+                    </a>
+                    <!-- Link para a seção de contato (placeholder, sem referência) -->
+                    <a href="">
+                        <li class="itens_menu">Contato</li>
+                    </a>
+                    <!-- Link para a seção "Sobre" (Nossa História) -->
+                    <a href="#nossa_historia">
+                        <li class="itens_menu">Sobre</li>
+                    </a>
+                </ul>
+            </menu>
+        </nav>
+        <main>
+            <!-- Seção principal com uma imagem de capa e o nome do site -->
+            <div class="capa" id="capa">
+                <div class="home">
+                    <div class="nome_home">
+                        <!-- Título principal e subtítulo -->
+                        <h1>Likizoa</h1>
+                        <p>Serviços e Treinamentos</p>
+                    </div>
+                    <!-- Frase principal de destaque -->
+                    <div class="frase">Gerenciando Horas, Entregando Confiança </div>
                 </div>
-                <div class="frase">Gerenciando Horas, Entregando Confiança </div>
+                <!-- Efeito visual de desfoque sobre a imagem de fundo -->
+                <div class="blur"></div>
             </div>
-            <div class="blur"></div>
-        </div>
-        <div class="controle_jornada" id="controle_jornada">
-            <div class="down">
-                <a href="#controle_jornada">
-                    <div class="container_seta">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#0583f2" fill="none">
-                            <path d="M12 20L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 15C17 15 13.3175 20 11.9999 20C10.6823 20 6.99997 15 6.99997 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- Seção de controle de jornada -->
+            <div class="controle_jornada" id="controle_jornada">
+                <div class="down">
+                    <!-- Ícone de seta para rolar para a seção "controle_jornada" -->
+                    <a href="#controle_jornada">
+                        <div class="container_seta">
+                            <!-- SVG da seta para baixo -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                                <path d="M12 20L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17 15C17 15 13.3175 20 11.9999 20C10.6823 20 6.99997 15 6.99997 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <!-- Texto explicativo sobre o controle de jornada -->
+                <div class="container_escrita">
+                    <h1 class="titulo_controle_de_jornada">Controle de jornada</h1>
+                    <p class="texto_controle_de_jornada">De acordo com a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13103.htm" class="lei">Lei 13.103</a>, o controle da jornada dos motoristas deve ser realizado de forma diária e em tempo real, registrando minuciosamente os horários de início e fim da condução, bem como as pausas, intervalos e períodos de descanso. Esse processo é vital para assegurar que os motoristas não ultrapassem os limites permitidos de tempo de direção, cumpram os intervalos obrigatórios e respeitem a jornada máxima de trabalho.
+                        Portanto, para atender às exigências da <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13103.htm" class="lei">Lei 13.103</a>, o controle da jornada dos motoristas precisa ser estritamente monitorado, com registros precisos e em tempo real dos períodos de condução, pausas e descanso. Isso não só garante a segurança do motorista, como também assegura a conformidade com a legislação.</p>
+                </div>
+            </div>
+        
+            <div class="container_nossa_empresa" id="nossa_empresa">
+                <div class="nossa_empresa">
+                    <h1 class="titulo_nossa_empresa">Nossa Empresa</h1>
+                    <div class="container_icon_and_desc">
+                        <img class="imagem_nossa_empresa" src="" alt="">
+                        <p class="texto_nossa_empresa">A LIKIZOA oferece uma solução completa para o controle da jornada dos motoristas, automatizando o registro em tempo real dos horários de início e término da condução, pausas e intervalos de descanso. Essa automação minimiza significativamente a chance de erros humanos e assegura que as regulamentações sejam seguidas com eficiência. Além disso, nossa solução proporciona dados exatos, facilitando as operações e a tomada de decisões. A automação elimina a burocracia dos registros manuais, centralizando os dados e permitindo o acesso a relatórios detalhados que possibilitam uma análise profunda para otimizar o desempenho da frota. Essa visibilidade aprimorada não apenas aumenta a eficiência, mas também promove melhorias operacionais concretas.
+                        </p>
+                        <svg class="pin_nossa_empresa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" color="#000000" fill="none">
+                            <path d="M3 21L8 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.2585 18.8714C9.51516 18.0215 5.97844 14.4848 5.12853 10.7415C4.99399 10.1489 4.92672 9.85266 5.12161 9.37197C5.3165 8.89129 5.55457 8.74255 6.03071 8.44509C7.10705 7.77265 8.27254 7.55888 9.48209 7.66586C11.1793 7.81598 12.0279 7.89104 12.4512 7.67048C12.8746 7.44991 13.1622 6.93417 13.7376 5.90269L14.4664 4.59604C14.9465 3.73528 15.1866 3.3049 15.7513 3.10202C16.316 2.89913 16.6558 3.02199 17.3355 3.26771C18.9249 3.84236 20.1576 5.07505 20.7323 6.66449C20.978 7.34417 21.1009 7.68401 20.898 8.2487C20.6951 8.8134 20.2647 9.05346 19.4039 9.53358L18.0672 10.2792C17.0376 10.8534 16.5229 11.1406 16.3024 11.568C16.0819 11.9955 16.162 12.8256 16.3221 14.4859C16.4399 15.7068 16.2369 16.88 15.5555 17.9697C15.2577 18.4458 15.1088 18.6839 14.6283 18.8786C14.1477 19.0733 13.8513 19.006 13.2585 18.8714Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                </a>
+                </div>
             </div>
-        </div>
-        <div class="custom-shape-divider-bottom-1725329013">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </main>
-</body>
+            <div class="container_metodos_all">
+                <div class="container_metodos">
+                    <h1 class="titulo_metodos">Métodos</h1>
+                    </svg>
+                    <p class="texto_metodos">Contamos com diversas maneiras para monitorar a jornada de trabalho dos motoristas, ferramentas indispensáveis para registrar tanto o tempo de trabalho quanto os períodos de descanso no setor de transporte rodoviário de cargas e passageiros. Esses recursos são cruciais para garantir a segurança nas estradas e o cumprimento das normas vigentes. Dentre os métodos que utilizamos, destacam-se:</p>
+                    <div class="carrossel_metodos">
+                        <p class="metodo metodo_01 sai_carrossel">Sistema de Rastreamento via GPS: Esse sistema permite o monitoramento contínuo da localização e das atividades dos motoristas. Extraímos os dados do rastreador do veículo, integrando-os ao nosso sistema, o que possibilita o cálculo automático do tempo de condução e das pausas, com base no movimento e posição do veículo. Além disso, é possível captar outras informações do rastreador para auxiliar na identificação automática e na gestão do controle de jornada.</p>
+                        <p class="metodo metodo_02">Aplicativo de Controle de Jornada: Desenvolvemos um aplicativo móvel que permite aos motoristas registrar suas horas de trabalho, pausas e períodos de descanso diretamente por meio de smartphones ou tablets. O aplicativo utiliza a localização GPS para identificar o local exato onde o registro está sendo feito.</p>
+                    </div>
+                    <div class="container_bolinhas">
+                        <div class="bolinhas bolinha_01"></div>
+                        <div class="bolinhas bolinha_02"></div>
+                    </div>
+                    <p class="continuacao_metodos">Vale ressaltar que a leitura dos dados é feita de maneira automática e em tempo real, mas o gerenciamento do controle de jornada é monitorado diariamente por nossa equipe de operadores, que analisam de forma ampla os interstícios e eventuais ocorrências.
+                        A implementação desses sistemas tem como objetivo garantir o cumprimento das legislações e normas de segurança, evitando a exaustão dos motoristas e, consequentemente, aumentando a segurança nas rodovias.</p>
+                                </div>
+                </div>
+        </main>
+    </div>
 
-<script src="public/scripts/menu.js"></script>
+    <!-- Importa o arquivo JavaScript que gerencia o menu -->
+    <script src="public/scripts/menu.js"></script>
+    <script src="public/scripts/nossaEmpresa.js"></script>
+</body>
 </html>

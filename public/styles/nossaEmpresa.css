@@ -1,0 +1,117 @@
+.container_nossa_empresa{
+    background-color: var(--branco);
+    position: relative;
+    padding: 10px 10px 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nossa_empresa{
+    padding: 20px;
+    background-color: white;
+    backdrop-filter: blur(20px);
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    
+}
+
+.container_icon_and_desc{
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.titulo_nossa_empresa{
+    text-align: center;
+    font-family: 'padrao', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.texto_nossa_empresa{
+    text-align: justify;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+}
+
+.pin_nossa_empresa{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.texto_metodos{
+    text-align: justify;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 50px;
+}
+
+/*Métodos-------------------------------------------------*/
+
+.container_metodos_all{
+    background-color: white;
+}
+
+.container_metodos{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 50px 20px;
+}
+
+.titulo_metodos{
+    text-align: center;
+    font-family: 'padrao', sans-serif;
+}
+
+.carrossel_metodos{
+    display: flex;
+    position: relative;
+    height: 350px;
+}
+
+.metodo{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 50px;
+    position: absolute;
+    width: 100%;
+
+
+}
+
+.container_bolinhas{
+    display: flex;
+    margin: auto;
+}
+
+.bolinhas{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.bolinha_01{
+    background-color: black;
+}
+
+.continuacao_metodos{
+    text-align: justify;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 30px;
+}
+
+

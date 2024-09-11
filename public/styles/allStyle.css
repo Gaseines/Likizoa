@@ -32,3 +32,8 @@ body{
     font-family: 'padrao';
     src: url(../fonts/coolvetica\ rg\ it.otf);
 }
+
+@font-face {
+    font-family: 'escrita';
+    src: url(../fonts/Roboto-Regular.ttf);
+}

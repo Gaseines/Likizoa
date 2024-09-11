@@ -1,9 +1,10 @@
+
 @media (min-width: 960px) {
 
-    /*Menu*/
+    /*Menu---------------------------------------------------------------*/
 
     .img_logo{
-        width: 200px;
+        width: 180px;
         
     }
     
@@ -15,6 +16,7 @@
     flex-direction: row;
     
     height: 300px;
+    
     border-radius: 10px 10px 0px 0px;
 
     background-color: rgba(0, 0, 0, 0.150);
@@ -31,4 +33,52 @@
     padding-top: 20px;
     margin: 0px 20px;
    }
+
+   /*Controle de Jornada -------------------------------------------------*/
+
+   .container_escrita{
+    background-image: url(../img/capa_jornada.jpg);
+    background-position: center center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+   }
+
+   .texto_controle_de_jornada{
+    background-image: none;
+   }
+
+   /*Nossa Empresa--------------------------------------------------------*/
+
+   .nossa_empresa{
+    max-width: 950px;
+   }
+
+   /*Métodos--------------------------------------------------------------*/
+
+   .container_metodos{
+    margin: auto;
+    max-width: 800px;
+   }
+
+   .carrossel_metodos{
+    height: 200px;
+   }
+
+}
+
+@media (min-width: 1281px) {
+    /*Menu---------------------------------------------------------------*/
+    .menu{
+        margin-left: 0px;
+        
+    }
+
+    /*Controle de Jornada-------------------------------------------------*/
+    
+    .container_escrita{
+        background-image: url(../img/capa_jornada.jpg);
+        background-position: center center;
+        background-size: 25%;
+        background-repeat: no-repeat;
+       }
 }
