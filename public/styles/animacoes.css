@@ -1,3 +1,5 @@
+
+/*Menu---------------------------------------------------*/
 .giraCloseD{
     animation: giraCloseD 0.3s ease-in-out forwards;
 }
@@ -14,6 +16,7 @@
     animation: giraOpenE 0.3s ease-in-out forwards;
 }
 
+/*Carrossel -------------------------------------------*/
 .sai_carrossel{
     animation: sai_carrossel 2s ease-in-out forwards;
 }
@@ -22,6 +25,36 @@
     animation: entra_carrossel 2s ease-in-out forwards;
 }
 
+/*Animaçoes gerais-------------------------------------*/
+.ani_escrita_ED{
+    animation: ani_escrita_ED 1s ease-in-out forwards;
+}
+
+.ani_escrita_DE{
+    animation: ani_escrita_DE 1s ease-in-out forwards;
+}
+
+@keyframes ani_escrita_DE {
+    0%{
+        margin-left: 250%;
+        opacity: 1;
+    }
+    100%{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes ani_escrita_ED {
+    0%{
+        margin-left: -150%;
+        opacity: 1;
+    }
+    100%{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
 
 @keyframes sai_carrossel{
     0%{
