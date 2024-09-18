@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titluCJ = document.querySelector('.titulo_controle_de_jornada');
     const fraseHome = document.querySelector('.frase')
     const imgNossaEmpresa = document.querySelector('.container_img_nossa_empresa')
+    const txtIA = document.querySelector('.texto_IA')
     // Configuração do Intersection Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(titluCJ);
     observer.observe(fraseHome)
     observer.observe(imgNossaEmpresa)
+    observer.observe(txtIA)
 });
 
 //Escritas DIREITA PARA ESQUERDA---------------------------------------------
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const likizoaHome= document.querySelector('.nome_home')
     const nossaEmpresa = document.querySelector('.nossa_empresa')
     const imgMetodos = document.querySelector('.img_metodos')
+    const QRcODE = document.querySelector('.QRcode_IA')
 
     // Configuração do Intersection Observer
     const observer = new IntersectionObserver((entries) => {
@@ -42,4 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(likizoaHome);
     observer.observe(nossaEmpresa);
     observer.observe(imgMetodos);
+    observer.observe(QRcODE);
 });

@@ -31,6 +31,7 @@
 .container_desc_nossa_empresa{
     position: relative;
     padding-bottom: 80px;
+    text-align: center;
     
 }
 
@@ -54,13 +55,35 @@
         
 }
 
-.texto_metodos{
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: 'escrita', serif;
+.link_nossa_empresa{
+   text-decoration: none;
+   font-family: 'escrita', serif;
+   font-size: 1.3em;
+   font-weight: bold;
+   color: var(--preto);
 
-    margin-top: 50px;
+   position: relative;
+}
+
+.link_nossa_empresa:hover{
+    color: rgb(48, 48, 48);
+}
+
+.link_nossa_empresa::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(48, 48, 48);
+
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    
+    transition: 0.5s ease-in-out;
+}
+
+.link_nossa_empresa:hover::after{
+    width: 50%;
 }
 
 /*Métodos-------------------------------------------------*/
@@ -88,6 +111,15 @@
     font-family: 'padrao', sans-serif;
 }
 
+.texto_metodos{
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 50px;
+}
+
 .carrossel_metodos{
     display: flex;
     position: relative;
@@ -96,7 +128,7 @@
 
 .metodo{
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     font-family: 'escrita', serif;
 
@@ -126,7 +158,7 @@
 
 .continuacao_metodos{
     text-align: justify;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     font-family: 'escrita', serif;
 
@@ -135,7 +167,7 @@
 
 .container_img_metodos{
     position: absolute;
-    right: 50px;
+    right: 2%;
     top: -220px;
 
     

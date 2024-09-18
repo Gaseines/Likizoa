@@ -40,31 +40,91 @@
     background-size: 200%;
    }
 
+
    /*Nossa Empresa--------------------------------------------------------*/
 
-   .nossa_empresa{
-    max-width: 950px;
+   .container_nossa_empresa{
+    padding-bottom: 0;
    }
+
+   .nossa_empresa{
+    width: 100%;
+   }
+
+   .container_img_nossa_empresa{
+    display: none;
+}
+
+    .texto_nossa_empresa{
+        width: 100%;
+    }
 
    /*Métodos--------------------------------------------------------------*/
 
    .container_metodos{
-    max-width: 800px;
+    width: 100%;
+    margin-left: 0;
    }
 
    .carrossel_metodos{
     height: 350px;
    }
 
+   .container_img_metodos{
+    display: none;
+   }
+
+   .container_bolinhas{
+    margin-top: 100px;
+   }
+
+
 }
 
-@media (min-width: 1281px) {
+@media (max-width: 1220px) {
+    .container_img_metodos{
+        display: none;
+       }
+}
+
+@media (min-width: 1520px) {
     /*Menu---------------------------------------------------------------*/
     .menu{
         margin-left: 0px;
         
     }
 
+    /*Controle de Jornada----------------------------------------------*/
+
+    .controle_jornada{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_escrita{
+        max-width: 1280px;
+    }
+
+    /*Nossa Empresa--------------------------------------------*/
+
+    .container_nossa_empresa{
+        justify-content: center;
+    }
+
     /*Metodos-------------------------------------------------*/
 
+    .container_metodos_all{
+        justify-content: center;
+    }
+
+    .container_metodos{
+        margin: 0px;
+    }
+
+}
+
+@media (min-width: 1920px){
+    .container_img_metodos{
+        right: 10%;
+    }
 }
