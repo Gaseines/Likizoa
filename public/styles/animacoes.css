@@ -34,24 +34,37 @@
     animation: ani_escrita_DE 1s ease-in-out forwards;
 }
 
-@keyframes ani_escrita_DE {
+.ani_BC{
+    animation: ani_BC 1s ease-in-out forwards;
+}
+
+@keyframes ani_BC {
     0%{
-        margin-left: 250%;
-        opacity: 1;
+        transform: translateY(200px);
+        opacity: 0;
     }
     100%{
-        margin-left: 0;
+    
+        opacity: 1;
+    }
+}
+
+@keyframes ani_escrita_DE {
+    0%{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+    100%{
         opacity: 1;
     }
 }
 
 @keyframes ani_escrita_ED {
     0%{
-        margin-left: -150%;
-        opacity: 1;
+        transform: translateX(-200%);
+        opacity: 0;
     }
     100%{
-        margin-left: 0;
         opacity: 1;
     }
 }

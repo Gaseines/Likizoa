@@ -35,6 +35,14 @@ main{
     margin: auto;
 }
 
+footer{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
 
 @font-face {
     font-family: 'padrao';
