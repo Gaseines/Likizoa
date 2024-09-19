@@ -1,130 +1,173 @@
-
 @media (max-width: 960px) {
 
     /*Menu---------------------------------------------------------------*/
 
-    .img_logo{
+    .img_logo {
         width: 100px;
-        
+
     }
-    
-   .burguer{
-    display: block;
-   }
 
-   .menu{
-    flex-direction: column;
-    
-    height: 0%;
-    
-    border-radius: 20px;
+    .burguer {
+        display: block;
+    }
 
-    background-color: rgba(0, 0, 0, 0.541);
-    
-    backdrop-filter: blur(6px);
-   }
+    .menu {
+        flex-direction: column;
 
-   .lista_menu{
-    display: none;
-    opacity: 0;
-   }
+        height: 0%;
 
-   .itens_menu{
-    padding-top: 50px;
-    margin: 0px;
-   }
+        border-radius: 20px;
 
-   /*Controle de Jornada -------------------------------------------------*/
+        background-color: rgba(0, 0, 0, 0.541);
 
-   .container_escrita{    
-    background-size: 200%;
-   }
+        backdrop-filter: blur(6px);
+    }
+
+    .lista_menu {
+        display: none;
+        opacity: 0;
+    }
+
+    .itens_menu {
+        padding-top: 50px;
+        margin: 0px;
+    }
+
+    /*Controle de Jornada -------------------------------------------------*/
+
+    .container_escrita {
+        background-size: 200%;
+    }
 
 
-   /*Nossa Empresa--------------------------------------------------------*/
+    /*Nossa Empresa--------------------------------------------------------*/
 
-   .container_nossa_empresa{
-    padding-bottom: 0;
-   }
+    .container_nossa_empresa {
+        padding-bottom: 0;
+    }
 
-   .nossa_empresa{
-    width: 100%;
-   }
-
-   .container_img_nossa_empresa{
-    display: none;
-}
-
-    .texto_nossa_empresa{
+    .nossa_empresa {
         width: 100%;
     }
 
-   /*Métodos--------------------------------------------------------------*/
+    .container_img_nossa_empresa {
+        display: none;
+    }
 
-   .container_metodos{
-    width: 100%;
-    margin-left: 0;
-   }
+    .texto_nossa_empresa {
+        width: 100%;
+    }
 
-   .carrossel_metodos{
-    height: 350px;
-   }
+    /*Métodos--------------------------------------------------------------*/
 
-   .container_img_metodos{
-    display: none;
-   }
+    .container_metodos {
+        width: 100%;
+        margin-left: 0;
+    }
 
-   .container_bolinhas{
-    margin-top: 100px;
-   }
+    .carrossel_metodos {
+        height: 350px;
+    }
+
+    .container_img_metodos {
+        display: none;
+    }
+
+    .container_bolinhas {
+        margin-top: 100px;
+    }
+
+    /*Inteligencia Artificial---------------------------------*/
+
+    .IA {
+        flex-direction: column;
+    }
+
+    .secao_IA{
+        width: 300px;
+        height: 400px;
+    }
+
+    .QRcode_IA{
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .QRcode_IA img{
+        width: 200px;
+    }
+
+    /*Parceiros--------------------------------------------------*/
+
+    .parceiros{
+        width: 100%;
+    }
+
+    .img_clientes{
+        width: 150px;
+    }
+
+    /*Contatos-----------------------------------------------*/
+
+    .container_numeros_contato{
+        font-size: 1.2em;
+    }
+
+    .numeros_contato{
+        width: 160px;
+        padding: 10px;
+    }
 
 
 }
 
 @media (max-width: 1220px) {
-    .container_img_metodos{
+    .container_img_metodos {
         display: none;
-       }
+    }
 }
 
 @media (min-width: 1520px) {
+
     /*Menu---------------------------------------------------------------*/
-    .menu{
+    .menu {
         margin-left: 0px;
-        
+
     }
 
     /*Controle de Jornada----------------------------------------------*/
 
-    .controle_jornada{
+    .controle_jornada {
         display: flex;
         justify-content: center;
     }
 
-    .container_escrita{
+    .container_escrita {
         max-width: 1280px;
     }
 
     /*Nossa Empresa--------------------------------------------*/
 
-    .container_nossa_empresa{
+    .container_nossa_empresa {
         justify-content: center;
     }
 
     /*Metodos-------------------------------------------------*/
 
-    .container_metodos_all{
+    .container_metodos_all {
         justify-content: center;
     }
 
-    .container_metodos{
+    .container_metodos {
         margin: 0px;
     }
 
 }
 
-@media (min-width: 1920px){
-    .container_img_metodos{
+@media (min-width: 1920px) {
+    .container_img_metodos {
         right: 10%;
     }
 }
