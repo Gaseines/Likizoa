@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bolinha1.style.background = 'white';
         }
         i++; // Incrementa o contador
+        window.scrollTo(0, 0);
     }
 
     // Função para reiniciar o carrossel a cada 5.5 segundos
