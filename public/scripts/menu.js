@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             burguer.classList.remove('giraCloseD')
             burguer.style.display = 'block'
             menu.style.height = '0%'
+            listaMenu.style.display = 'none'
         }
     }
 
-    window.addEventListener('resize', tamanhoTela)
-    window.addEventListener('load', tamanhoTela)
+    window.addEventListener('resize', tamanhoTela())
+    window.addEventListener('load', tamanhoTela())
 })
 
 //funções menu

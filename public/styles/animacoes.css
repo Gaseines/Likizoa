@@ -71,12 +71,11 @@
 
 @keyframes sai_carrossel{
     0%{
-        left: 0%;
         display: block;
         opacity: 1;
     }
     98%{
-        left: -150%;
+        transform: translateX(-150%);
         
     }
     100%{
@@ -88,11 +87,11 @@
 @keyframes entra_carrossel{
     0%{
         opacity: 0;
-        right: -250%;
+        transform: translateX(150%);
     }
     100%{
         display: block;
-        right: 0;
+        
         opacity: 1;
     }
 }
