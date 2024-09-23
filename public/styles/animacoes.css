@@ -71,7 +71,6 @@
 
 @keyframes sai_carrossel{
     0%{
-        display: block;
         opacity: 1;
     }
     98%{
@@ -90,7 +89,6 @@
         transform: translateX(150%);
     }
     100%{
-        display: block;
         
         opacity: 1;
     }

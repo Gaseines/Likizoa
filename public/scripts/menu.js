@@ -8,23 +8,24 @@ let navMenu = document.querySelector('.nav_menu')
 //Mudança de tela
 document.addEventListener('DOMContentLoaded', () => {
     function tamanhoTela(){
-        if(window.innerWidth >= 1100){
+        if(window.innerWidth <= 1100){
+            burguer.classList.remove('giraCloseD')
+            burguer.style.display = 'block'
+            menu.style.height = '0%'
+            listaMenu.style.display = 'none'
+        }else{
+
             burguer.style.display = 'none'
             fechar.style.display = 'none'
             menu.style.height = '100px'
             menu.style.flexDirection = 'row'
             listaMenu.style.display = 'flex'
             listaMenu.style.opacity = 1
-        }else{
-            burguer.classList.remove('giraCloseD')
-            burguer.style.display = 'block'
-            menu.style.height = '0%'
-            listaMenu.style.display = 'none'
         }
     }
 
-    window.addEventListener('resize', tamanhoTela())
-    window.addEventListener('load', tamanhoTela())
+    window.addEventListener('resize', tamanhoTela)
+    window.addEventListener('load', tamanhoTela)
 })
 
 //funções menu
