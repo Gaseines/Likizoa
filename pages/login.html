@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../public/img/icone_logo.png" type="image/x-icon">
+    <title>Login - Controle de Jornada</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo"><img src="../public/img/logo.png" alt="Likizoa" class="logo"></a>
+            <a href="../index.html" class="voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal (formulário de login) -->
+    <main>
+        <h1>Área de Login</h1>
+        <form id="login-form" class="login-form">
+            <!-- Formulário de seleção de login (cliente ou funcionário) -->
+            <label for="user-type">Selecione o tipo de login:</label>
+            <select id="user-type" name="user-type" required>
+                <option value="">Escolha...</option>
+                <option value="cliente">Cliente</option>
+                <option value="funcionario">Colaborador</option>
+            </select>
+
+            <!-- Seção para clientes -->
+            <div id="cliente-section" style="display: none;">
+                <label for="cnpj">Digite o CNPJ:</label>
+                <input type="text" id="cnpj" placeholder="Digite o CNPJ">
+                
+                <p class="aviso">Sem cadastro? Entre em contato</p>
+                    
+                </a>
+                <button id="cliente-submit" class="submit-btn">Acessar Sistema</button>
+
+                
+            </div>
+
+            <!-- Seção para funcionários -->
+            <div id="funcionario-section" style="display: none;">
+                <label for="cpf">Digite o CPF:</label>
+                <input type="text" id="cpf" placeholder="Digite o CPF">
+                <p id="cpf-error" style="color: red; display: none;">CPF inválido!</p>
+
+                <!-- Dropdown de clientes vinculados ao CPF -->
+                <div id="cliente-dropdown" style="display: none;">
+                    <label for="clientes">Selecione o cliente:</label>
+                    <select id="clientes">
+                        <option value="">Escolha um cliente...</option>
+                    </select>
+                    <button id="funcionario-submit" class="submit-btn" style="display: none;">Acessar Sistema</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="alert" style="color: red; display: none;">Por favor, preencha todos os campos corretamente.</div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Developer Gabriel Nunes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>

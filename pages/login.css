@@ -1,0 +1,143 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #c2daff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #006CE3;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+}
+
+nav .voltar {
+    color: #0583F2;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav .voltar i {
+    margin-right: 8px;
+}
+
+nav .voltar:hover {
+    background-color: #0583F2;
+    color: #fff;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: justify;
+}
+
+main h1 {
+    color: #006CE3;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos existentes para o formulário */
+.login-form {
+    background-color: #0583F2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    margin: 20px auto;
+}
+
+.login-form label {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login-form input,
+.login-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #006CE3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.aviso{
+    color: white;
+}
+
+.aviso a{
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #87c7ff;
+}
+
+/* Animações de fade-in e fade-out */
+.section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

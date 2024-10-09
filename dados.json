@@ -1,0 +1,488 @@
+{
+    "clientes": [
+        {
+            "nome": "ALBANI",
+            "cnpj": "01799612000159",
+            "link": "http://likizoa-albani.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "BC",
+            "cnpj": "21092289000196",
+            "link": "https://likizoa-bccargo.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "PEDRAO",
+            "cnpj": "48913718000103",
+            "link": "https://likizoa-pedrotc.jornadatrabalho2.com.br/login.php"
+        },
+        {
+            "nome": "BETEL",
+            "cnpj": "04983701000149",
+            "link": "http://likizoa-betel.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "BEVIANI",
+            "cnpj": "16464947000193",
+            "link": "http://likizoa-beviani.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "COMEXCARGO ",
+            "cnpj": "17267272000155",
+            "link": "http://likizoa-comexcargo.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "CONTRANS",
+            "cnpj": "08530139000159",
+            "link": "http://likizoa-contrans.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "DUMASZAK",
+            "cnpj": "05872409000111",
+            "link": "http://likizoa-dumaszak.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "EIL",
+            "cnpj": "06698403000132",
+            "link": "http://likizoa-eiltransportes.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "EVANDRO SANTOS",
+            "cnpj": "13226205000131",
+            "link": "http://likizoa-evandro.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "TRANSCOSTA",
+            "cnpj": "10385872000179",
+            "link": "http://likizoa-transcosta.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "FROES",
+            "cnpj": "05071497000233",
+            "link": "http://likizoa-froes.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "SPIAZZI",
+            "cnpj": "17279057000174",
+            "link": "http://likizoa-gabkar.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "GH",
+            "cnpj": "07656322000132",
+            "link": "http://likizoa-ghtransportes.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "GTL OLIVEIRA",
+            "cnpj": "34211473000150",
+            "link": "http://likizoa-gtl.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "HR",
+            "cnpj": "22348856000195",
+            "link": "http://likizoa-hr.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "ITACIBALOG",
+            "cnpj": "48159624000182",
+            "link": "https://likizoa-mwm.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "SIMAS",
+            "cnpj": "06121678000109",
+            "link": "http://likizoa-simassouza.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "JOMAR",
+            "cnpj": "79842399000108",
+            "link": "http://likizoa-jomar.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "BORDINON",
+            "cnpj": "11203575000128",
+            "link": "http://likizoa-bordignon.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "LF CARGO",
+            "cnpj": "14554606000183",
+            "link": "http://likizoa-lfcargo.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "MGE",
+            "cnpj": "02136635000146",
+            "link": "http://likizoa-mge.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "MWM",
+            "cnpj": "54157062000130",
+            "link": "https://likizoa-mwm.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "MVR",
+            "cnpj": "52347618000126",
+            "link": "https://likizoa-mwm.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "MVR",
+            "cnpj": "48159434000165",
+            "link": "https://likizoa-mwm.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "PICOLI",
+            "cnpj": "00695709000159",
+            "link": "http://likizoa-picoli.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "PORTOEX",
+            "cnpj": "22725000000191",
+            "link": "http://likizoa-portoex.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "PORTOLOG",
+            "cnpj": "07746756000123",
+            "link": "http://likizoa-portolog.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "WERNER",
+            "cnpj": "83551234000154",
+            "link": "http://likizoa-werner.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "RTM",
+            "cnpj": "15308905000109",
+            "link": "http://likizoa-rtm.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "SAFFLOG (FORTALEZA_PORTO)",
+            "cnpj": "15245792000484",
+            "link": "http://likizoa-saff.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "SAFF",
+            "cnpj": "15245792000131",
+            "link": "http://likizoa-saff.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "SAFFLOG (SANTOS)",
+            "cnpj": "15245792000646",
+            "link": "http://likizoa-saff.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "SAN MARTINO",
+            "cnpj": "10441679000108",
+            "link": "http://likizoa-sanmartino.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "KOBRASOL",
+            "cnpj": "82880212000175",
+            "link": "http://likizoa-kobrasol.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "SMLOG",
+            "cnpj": "29756135000163",
+            "link": "http://likizoa-smlog.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "SEM FRONTEIRAS",
+            "cnpj": "10972711000181",
+            "link": "http://likizoa-semfronteiras.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "TAC",
+            "cnpj": "07639029000167",
+            "link": "http://likizoa-tac.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "BARONCELO",
+            "cnpj": "83686428000167",
+            "link": "http://likizoa-baroncello.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "NARDI",
+            "cnpj": "38119932000120",
+            "link": "http://likizoa-nardi.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "MOOR",
+            "cnpj": "22627253000122",
+            "link": "http://likizoa-transmoor.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "PAGANINI",
+            "cnpj": "78514890000147",
+            "link": "http://likizoa-paganini.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "Portainer",
+            "cnpj": "13861304000195",
+            "link": "http://likizoa-portainer.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "RISSI",
+            "cnpj": "15197289000158",
+            "link": "http://likizoa-rissi.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "VIBELOG",
+            "cnpj": "14963587000149",
+            "link": "http://likizoa-vibelog.jornadatrabalho.com.br/"
+        },
+        {
+            "nome": "VIP COMERCIO DE PLASTICOS",
+            "cnpj": "06932964000154",
+            "link": "http://likizoa-viplog.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "VIPLOG",
+            "cnpj": "11399566000154",
+            "link": "http://likizoa-viplog.jornadatrabalho2.com.br/"
+        },
+        {
+            "nome": "Barcellos",
+            "cnpj": "30736478000145",
+            "link": "https://likizoa-barcelloscomex.jornadatrabalho3.com.br/"
+        },
+        {
+            "nome": "WAGNER ROSA NASCIMENTOS",
+            "cnpj": "17506455000186",
+            "link": "https://likizoa-mwm.jornadatrabalho3.com.br/"
+        }
+    ],
+    "funcionarios": [
+        {"nome": "Gabriel Nunes",
+            
+            "cpf": "07009697990",
+            "clientes": [
+                {
+                    "nome": "BC",
+                    "link": "https://likizoa-bccargo.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "PEDRAO",
+                    "link": "https://likizoa-pedrotc.jornadatrabalho2.com.br/login.php"
+                },
+                {
+                    "nome": "BEVIANI",
+                    "link": "http://likizoa-beviani.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "CONTRANS",
+                    "link": "http://likizoa-contrans.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "TRANSCOSTA",
+                    "link": "http://likizoa-transcosta.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "GH",
+                    "link": "http://likizoa-ghtransportes.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "SIMAS",
+                    "link": "http://likizoa-simassouza.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "JOMAR",
+                    "link": "http://likizoa-jomar.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "PICOLI",
+                    "link": "http://likizoa-picoli.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "PORTOEX",
+                    "link": "http://likizoa-portoex.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "SAN MARTINO",
+                    "link": "http://likizoa-sanmartino.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "SEM FRONTEIRAS",
+                    "link": "http://likizoa-semfronteiras.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "NARDI",
+                    "link": "http://likizoa-nardi.jornadatrabalho2.com.br/"
+                }
+            ]
+        },
+        {"nome": "Everson Nunes",
+            
+            "cpf": "83775552987",
+            "clientes": [
+                {
+                    "nome": "ALBANI",
+                    "link": "http://likizoa-albani.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "BC",
+                    "link": "https://likizoa-bccargo.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "PEDRAO",
+                    "link": "https://likizoa-pedrotc.jornadatrabalho2.com.br/login.php"
+                },
+                {
+                    "nome": "BETEL",
+                    "link": "http://likizoa-betel.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "BEVIANI",
+                    "link": "http://likizoa-beviani.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "COMEXCARGO ",
+                    "link": "http://likizoa-comexcargo.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "CONTRANS",
+                    "link": "http://likizoa-contrans.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "DUMASZAK",
+                    "link": "http://likizoa-dumaszak.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "EIL",
+                    "link": "http://likizoa-eiltransportes.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "EVANDRO SANTOS",
+                    "link": "http://likizoa-evandro.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "TRANSCOSTA",
+                    "link": "http://likizoa-transcosta.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "FROES",
+                    "link": "http://likizoa-froes.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "SPIAZZI",
+                    "link": "http://likizoa-gabkar.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "GH",
+                    "link": "http://likizoa-ghtransportes.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "GTL OLIVEIRA",
+                    "link": "http://likizoa-gtl.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "HR",
+                    "link": "http://likizoa-hr.jornadatrabalho3.com.br/"
+                },
+                
+                {
+                    "nome": "SIMAS",
+                    "link": "http://likizoa-simassouza.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "JOMAR",
+                    "link": "http://likizoa-jomar.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "BORDINON",
+                    "link": "http://likizoa-bordignon.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "LF CARGO",
+                    "link": "http://likizoa-lfcargo.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "MGE",
+                    "link": "http://likizoa-mge.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "MWM",
+                    "link": "https://likizoa-mwm.jornadatrabalho3.com.br/"
+                },
+                
+                {
+                    "nome": "PICOLI",
+                    "link": "http://likizoa-picoli.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "PORTOEX",
+                    "link": "http://likizoa-portoex.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "PORTOLOG",
+                    "link": "http://likizoa-portolog.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "WERNER",
+                    "link": "http://likizoa-werner.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "RTM",
+                    "link": "http://likizoa-rtm.jornadatrabalho2.com.br/"
+                },
+                
+                {
+                    "nome": "SAFF",
+                    "link": "http://likizoa-saff.jornadatrabalho.com.br/"
+                },
+                
+                {
+                    "nome": "SAN MARTINO",
+                    "link": "http://likizoa-sanmartino.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "KOBRASOL",
+                    "link": "http://likizoa-kobrasol.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "SMLOG",
+                    "link": "http://likizoa-smlog.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "SEM FRONTEIRAS",
+                    "link": "http://likizoa-semfronteiras.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "TAC",
+                    "link": "http://likizoa-tac.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "BARONCELO",
+                    "link": "http://likizoa-baroncello.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "NARDI",
+                    "link": "http://likizoa-nardi.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "MOOR",
+                    "link": "http://likizoa-transmoor.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "PAGANINI",
+                    "link": "http://likizoa-paganini.jornadatrabalho.com.br/"
+                },
+                {
+                    "nome": "Portainer",
+                    "link": "http://likizoa-portainer.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "RISSI",
+                    "link": "http://likizoa-rissi.jornadatrabalho3.com.br/"
+                },
+                {
+                    "nome": "VIBELOG",
+                    "link": "http://likizoa-vibelog.jornadatrabalho.com.br/"
+                },
+                
+                {
+                    "nome": "VIPLOG",
+                    "link": "http://likizoa-viplog.jornadatrabalho2.com.br/"
+                },
+                {
+                    "nome": "Barcellos",
+                    "link": "https://likizoa-barcelloscomex.jornadatrabalho3.com.br/"
+                }
+            ]
+        }
+    ]
+}
