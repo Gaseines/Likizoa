@@ -1,0 +1,15 @@
+main{
+  position: relative;
+  z-index: -1;
+}
+
+.all{
+  position: relative;
+  z-index: -1;
+  margin: auto;
+}
+
+#root{
+  position: relative;
+  z-index: -1;
+}

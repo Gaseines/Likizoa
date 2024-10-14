@@ -1,0 +1,106 @@
+.container_nossa_empresa {
+    background: url(../../image/fundo_com_linhas.jpg);
+    background-size: cover;
+    position: relative;
+    padding: 10px 10px 50px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -1px;
+    padding-bottom: 150px;
+}
+
+
+
+.container_img_nossa_empresa img {
+    width: 350px;
+    border-radius: 20px;
+    will-change: transform;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nossa_empresa {
+    padding: 20px;
+
+    width: 600px;
+}
+
+.container_desc_nossa_empresa {
+    position: relative;
+    padding-bottom: 80px;
+    text-align: center;
+
+}
+
+.titulo_nossa_empresa {
+    text-align: center;
+    font-family: 'padrao', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: var(--preto);
+
+}
+
+.texto_nossa_empresa {
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: bolder;
+    font-family: 'escrita', serif;
+    color: var(--preto);
+    letter-spacing: 1px;
+    width: 600px;
+
+}
+
+.link_nossa_empresa {
+    text-decoration: none;
+    font-family: 'escrita', serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--preto);
+
+    position: relative;
+}
+
+.link_nossa_empresa:hover {
+    color: rgb(48, 48, 48);
+}
+
+.link_nossa_empresa::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(48, 48, 48);
+
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.link_nossa_empresa:hover::after {
+    width: 50%;
+}
+
+
+
+@media (max-width: 960px) {
+
+    .container_nossa_empresa {
+        padding-bottom: 0;
+    }
+
+    .nossa_empresa {
+        width: 100%;
+    }
+
+    .container_img_nossa_empresa {
+        display: none;
+    }
+
+    .texto_nossa_empresa {
+        width: 100%;
+    }
+}

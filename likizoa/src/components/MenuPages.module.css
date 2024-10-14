@@ -1,0 +1,41 @@
+.header {
+    background-color: #006CE3;
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 180px;
+}
+
+.voltar {
+    color: #0583F2;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.voltar i {
+    margin-right: 8px;
+}
+
+.voltar:hover {
+    background-color: #0583F2;
+    color: #fff;
+}
+
+@media (max-width: 960px){
+    .logo img{
+        width: 120px;
+    }
+}

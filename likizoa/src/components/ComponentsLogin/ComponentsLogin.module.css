@@ -1,0 +1,101 @@
+.main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: justify;
+    
+}
+
+.main h1 {
+    color: #006CE3;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+/* Estilos existentes para o formulário */
+.login_form {
+    background-color: #0583F2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.login_form label {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login_form input,
+.login_form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.submit_btn {
+    width: 100%;
+    background-color: #006CE3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.aviso{
+    color: white;
+}
+
+.aviso a{
+    color: white;
+}
+
+.submit_btn:hover {
+    background-color: #87c7ff;
+}
+
+/* Animações de fade-in e fade-out */
+.section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main {
+        padding: 15px;
+    }
+
+    .main h1 {
+        font-size: 1.8rem;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit {
+        width: 80%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

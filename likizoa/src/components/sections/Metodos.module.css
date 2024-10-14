@@ -1,0 +1,146 @@
+.container_metodos_all {
+    display: flex;
+    background-color: white;
+    position: relative;
+}
+
+.container_metodos {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 50px 20px;
+    margin: auto;
+    max-width: 800px;
+
+    margin-left: 50px;
+
+}
+
+.titulo_metodos {
+    text-align: center;
+    font-family: 'padrao', sans-serif;
+}
+
+.texto_metodos {
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 50px;
+}
+
+.carrossel_metodos {
+    display: flex;
+    position: relative;
+    height: 200px;
+    cursor: pointer;
+}
+
+.metodo {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 50px;
+    position: absolute;
+    width: 100%;
+
+
+}
+
+.container_bolinhas {
+    display: flex;
+    margin: auto;
+}
+
+.bolinhas {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.bolinha_01 {
+    background-color: black;
+}
+
+.continuacao_metodos {
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'escrita', serif;
+
+    margin-top: 30px;
+}
+
+.container_img_metodos {
+    position: absolute;
+    right: 2%;
+    top: -220px;
+
+
+}
+
+.container_img_metodos img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    will-change: transform;
+    
+}
+
+.sai_carrossel{
+    animation: sai_carrossel 2s ease-in-out forwards;
+}
+
+.entra_carrossel{
+    animation: entra_carrossel 2s ease-in-out forwards;
+}
+
+@media (max-width: 960px) {
+
+    .container_metodos {
+        margin-left: 0;
+    }
+
+    .carrossel_metodos {
+        height: 350px;
+    }
+
+    .container_img_metodos {
+        display: none;
+    }
+
+    .container_bolinhas {
+        margin-top: 100px;
+    }
+}
+
+
+@keyframes sai_carrossel{
+    0%{
+        opacity: 1;
+    }
+    98%{
+        transform: translateX(-150%);
+        
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes entra_carrossel{
+    0%{
+        opacity: 0;
+        transform: translateX(150%);
+    }
+    100%{
+        
+        opacity: 1;
+    }
+}
