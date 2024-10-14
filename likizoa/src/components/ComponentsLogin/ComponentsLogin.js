@@ -200,7 +200,7 @@ function ComponentsLogin() {
                                 ))}
                             </select>
                             <button className={styles.submit_btn} onClick={handleSubmitFuncionario}>
-                                Acessar Sistema
+                                Acessar Sistem
                             </button>
                         </>
                     )}

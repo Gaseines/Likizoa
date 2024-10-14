@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import styles from './ControleJornada.module.css'
 import stylesAni from './animacoes.module.css'

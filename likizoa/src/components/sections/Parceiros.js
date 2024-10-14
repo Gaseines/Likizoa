@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 import styles from './Parceiros.module.css'
 import stylesAni from './animacoes.module.css';

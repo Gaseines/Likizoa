@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 import styles from './NossaEmpresaSections.module.css'
 
 function NossaEmpresaSections() {

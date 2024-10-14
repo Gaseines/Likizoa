@@ -25,3 +25,5 @@ yarn-error.log*
 
 #dados Fire base
 .env
+
+node_modules/

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"; // Importação de hooks do React
+import React, { useEffect, useState, useRef } from "react"; // Importação de hooks do React
 import styles from "./MenuHome.module.css"; // Importa os estilos específicos para o componente
 import logo from "../image/logo.png"; // Importa a imagem do logo
 import { Link } from "react-router-dom";

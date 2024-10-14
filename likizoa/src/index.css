@@ -35,10 +35,10 @@ body{
 
 @font-face {
   font-family: 'padrao';
-  src: url(../public/fonts/coolvetica\ rg\ it.otf);
+  src: url('./fonts/coolvetica.otf');
 }
 
 @font-face {
   font-family: 'escrita';
-  src: url(../public/fonts/Roboto-Regular.ttf);
+  src: url('./fonts/Roboto-Regular.ttf');
 }

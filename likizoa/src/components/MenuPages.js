@@ -1,6 +1,9 @@
+import React from 'react';
+import { Link } from 'react-router-dom'
+
 import styles from './MenuPages.module.css'
 import logo from '../image/logo.png'
-import { Link } from 'react-router-dom'
+
 
 
 function MenuPages(){

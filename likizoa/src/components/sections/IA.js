@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import styles from './IA.module.css'
 import stylesAni from './animacoes.module.css';
