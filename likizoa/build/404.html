@@ -1,20 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página não encontrada</title>
-    <script>
-        window.onload = function () {
-            window.history.go(-2);
-            window.location.reload()
+    <title>Voltar para Likizoa</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #006CE3 0%, #0583F2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    </script>
+
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 80px;
+            height: 80px;
+            bottom: 0;
+            left: 0;
+            animation: bounceBall 4s ease-in;
+        }
+
+        @keyframes bounceBall {
+            0% {
+                transform: translate(10px, -500%);
+            }
+
+            20% {
+                transform: translate(100%, -10%)
+            }
+
+            30% {
+                transform: translate(300%, -400%)
+            }
+
+            32% {
+                transform: translate(300%, -420%)
+            }
+
+            50% {
+                transform: translate(600%, -10%)
+            }
+
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .container h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        .container p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            animation: fadeIn 1.5s ease-in-out 0.5s;
+        }
+
+        .container button {
+            background-color: #0583F2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+            animation: popIn 1.5s ease-out 1s;
+        }
+
+        .container button:hover {
+            background-color: #006CE3;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .ball1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #F0A500;
+            border-radius: 50%;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            animation: ball1 5s ease forwards;
+        }
+
+        .ball2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #F0A500;
+            border-radius: 50%;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            animation: ball2 10s ease-out forwards;
+        }
+
+        @keyframes ball1 {
+            0% {
+                top: 0;
+            }
+            100%{
+                top: 100%;
+            }
+        }
+
+        @keyframes ball2 {
+            0% {
+                top: 0;
+            }
+            100%{
+                top: 100%;
+            }
+    </style>
 </head>
 
 <body>
-    <p>Loading...</p>
+
+
+    <div class="container">
+        <h1>Voltar para Likizoa</h1>
+        <p>Clique no botão abaixo para retornar ao site principal.</p>
+        <button onclick="window.location.href='https://likizoa.com.br';">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+
 </body>
 
 </html>
