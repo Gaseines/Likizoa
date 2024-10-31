@@ -8,3 +8,13 @@ footer {
     
     width: 100%;
 }
+
+.footer_link{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.footer_link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
