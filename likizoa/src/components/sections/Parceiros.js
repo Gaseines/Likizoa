@@ -146,11 +146,11 @@ function Parceiros() {
                     </div>
 
                     <div className={styles.logo_clientes}>
-                        <p className={styles.img_clientes}>Albani Transportes</p>
                         <p className={styles.img_clientes}>Renato Werner Transportes LTDA</p>
                         <p className={styles.img_clientes}>Evandro Transportes</p>
+                        <p className={styles.img_clientes}></p>
+                        <p className={styles.img_clientes}></p>
                         <p className={styles.img_clientes}>Transportes Paganini</p>
-                        <p className={styles.img_clientes}>Transportes Rissi</p>
                     </div>
                 </div>
             </div>
