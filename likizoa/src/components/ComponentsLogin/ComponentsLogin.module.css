@@ -41,7 +41,7 @@
     background-color: #ffffff;
 }
 
-.submit_btn {
+.submit_btn, .submit_btn_fun {
     width: 100%;
     background-color: #006CE3;
     color: white;
@@ -51,6 +51,16 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit_btn_fun{
+    margin-top: 0;
+}
+
+.planilhaLabel{
+    margin-top: 30px;
+    
 }
 
 .aviso{

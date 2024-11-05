@@ -56,6 +56,8 @@ function ComponentsLogin() {
     const [clientes, setClientes] = useState([]);
     const [cnpjValido, setCnpjValido] = useState(false);
     const [clienteLink, setClienteLink] = useState(''); // Armazena o link do cliente
+    const [clientePlanilha, setClientePlanilha] = useState('') //Armazena as planilhas refentes ao cliente
+    const [cpfPlanilhas, setCpfPlanilhas] = useState([]) //Armazena as planilhas refentes ao cliente
 
     const handleCpfChange = async (e) => {
         const cpf = limparCNPJCPF(e.target.value);
@@ -68,6 +70,7 @@ function ComponentsLogin() {
                 if (funcionario) {
                     setCpfValido(true); // CPF validado
                     setClientes(funcionario.clientes); // Define os clientes vinculados ao funcionário
+                    setCpfPlanilhas(funcionario.planilhas)
                 } else {
                     setCpfValido(false); // CPF não encontrado
                     setClientes([]);
@@ -93,9 +96,11 @@ function ComponentsLogin() {
                 if (cliente) {
                     setCnpjValido(true); // CNPJ validado
                     setClienteLink(cliente.link); // Armazena o link relacionado ao CNPJ
+                    setClientePlanilha(cliente.planilha); // Armazena a planilha relacionado ao CNPJ
                 } else {
                     setCnpjValido(false); // CNPJ não encontrado
                     setClienteLink(''); // Limpa o link
+                    setClientePlanilha(''); // Limpa a planilha
                 }
             } catch (error) {
                 console.error("Erro ao buscar dados do Firestore:", error);
@@ -116,6 +121,15 @@ function ComponentsLogin() {
         window.location.href = clienteLink; // Redireciona para o link do cliente
     };
 
+    const handleSubmitPlanilha = (e) => {
+        e.preventDefault();
+        if (!cnpjValido) {
+            setShowAlert(true);
+            return;
+        }
+        window.location.href = clientePlanilha; // Redireciona para o link do cliente
+    };
+
     // Função para submissão de funcionário
     const handleSubmitFuncionario = (e) => {
         e.preventDefault();
@@ -127,6 +141,19 @@ function ComponentsLogin() {
         }
 
         window.location.href = clienteLink; // Redireciona para o link do cliente selecionado
+    };
+
+    // Função para submissão de funcionário planilha
+    const handleSubmitFuncionarioPlanilha = (e) => {
+        e.preventDefault();
+        const clientePlanilha = document.getElementById('planilha-vinculada').value;
+
+        if (!clientePlanilha) {
+            setShowAlert(true);
+            return;
+        }
+
+        window.location.href = clientePlanilha; // Redireciona para o link do cliente selecionado
     };
 
     useEffect(() => {
@@ -173,10 +200,17 @@ function ComponentsLogin() {
                         onChange={handleCnpjChange} // Validação do CNPJ
                     />
                     {cnpjValido && (
-                        <button className={styles.submit_btn} onClick={handleSubmitCliente}>
+                        <>                        <button className={styles.submit_btn} onClick={handleSubmitCliente}>
                             Acessar Sistema
                         </button>
+                            {clientePlanilha && (
+                                <button className={styles.submit_btn} onClick={handleSubmitPlanilha}>
+                                    Acessar Planilha
+                                </button>
+                            )}
+                        </>
                     )}
+
                 </div>
 
                 {/* Seção de Funcionário */}
@@ -199,9 +233,26 @@ function ComponentsLogin() {
                                     </option>
                                 ))}
                             </select>
-                            <button className={styles.submit_btn} onClick={handleSubmitFuncionario}>
+                            <button className={styles.submit_btn_fun} onClick={handleSubmitFuncionario}>
                                 Acessar Sistema
                             </button>
+
+                            {cpfPlanilhas && (
+                                <>
+                                <label className={styles.planilhaLabel} htmlFor="planilha-vinculada">Selecione a Planilha do Cliente:</label>
+                                <select id="planilha-vinculada">
+                                    <option value="">Escolha um cliente...</option>
+                                    {cpfPlanilhas.map((planilha, index) => (
+                                        <option key={index} value={planilha.link}>
+                                            {planilha.cliente}
+                                        </option>
+                                    ))}
+                                </select>
+                                <button className={styles.submit_btn_fun} onClick={handleSubmitFuncionarioPlanilha}>
+                                    Acessar Planilha
+                                </button>
+                                </>
+                            )}
                         </>
                     )}
                 </div>
