@@ -174,6 +174,7 @@ function ComponentsLogin() {
 
     return (
         <div className={styles.main}>
+            <div className={styles.reflection}></div>
             <h1>Área de Login</h1>
             <form className={styles.login_form}>
                 {/* Seleção de tipo de login */}
@@ -193,7 +194,7 @@ function ComponentsLogin() {
                 {/* Seção de Cliente */}
                 <div id="cliente-section" style={{ display: 'none' }}>
                     <label htmlFor="cnpj">Digite o CNPJ:</label>
-                    <input
+                    <input className={styles.input_txt}
                         type="text"
                         id="cnpj"
                         placeholder="Digite o CNPJ"
@@ -216,7 +217,7 @@ function ComponentsLogin() {
                 {/* Seção de Funcionário */}
                 <div id="funcionario-section" style={{ display: 'none' }}>
                     <label htmlFor="cpf">Digite o CPF:</label>
-                    <input
+                    <input className={styles.input_txt}
                         type="text"
                         id="cpf"
                         placeholder="Digite o CPF"

@@ -3,7 +3,7 @@
     max-width: 900px;
     margin: 30px auto;
     text-align: justify;
-    
+    z-index: 999;
 }
 
 .main h1 {
@@ -32,13 +32,21 @@
 
 .login_form input,
 .login_form select {
-    width: 100%;
+    
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     background-color: #ffffff;
+}
+
+.login_form select{
+    width: 325px;
+}
+
+.login_form input{
+    width: 300px;
 }
 
 .submit_btn, .submit_btn_fun {
@@ -70,6 +78,9 @@
 .aviso a{
     color: white;
 }
+
+
+
 
 .submit_btn:hover {
     background-color: #87c7ff;
