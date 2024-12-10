@@ -118,34 +118,36 @@ function ComponentsLogin() {
     }
   };
 
-  const handleSubmitCliente = async (e) => {
-    const testePost = "https://temp.jornadatrabalho3.com.br/teste.php"
+  const handleSubmitCliente = (e) => {
+    // const testePost = "https://temp.jornadatrabalho3.com.br/teste.php"
 
     e.preventDefault();
     if (!cnpjValido) {
       setShowAlert(true);
       return;
     }
-    try {
-        // Fazendo a requisição POST
-        const response = await fetch(testePost, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ variavel: `${testePost}` }),
-        });
+    //Se for fazer a alteração com o Wagner excluir o redirecionamento e tornar a Função async
+    window.location.href = clienteLink; // Redireciona para o link do cliente
+    // try {
+    //     // Fazendo a requisição POST
+    //     const response = await fetch(testePost, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ variavel: `${testePost}` }),
+    //     });
 
-        if (response.ok) {
-            window.location.href = testePost; // Redireciona após o POST
-        } else {
-            console.error('Erro ao enviar dados ao sistema:', response.statusText);
-            alert('Erro ao acessar o sistema. Tente novamente.');
-        }
-    } catch (error) {
-        console.error('Erro na requisição:', error);
-        alert('Erro ao acessar o sistema. Tente novamente.');
-    }
+    //     if (response.ok) {
+    //         window.location.href = testePost; // Redireciona após o POST
+    //     } else {
+    //         console.error('Erro ao enviar dados ao sistema:', response.statusText);
+    //         alert('Erro ao acessar o sistema. Tente novamente.');
+    //     }
+    // } catch (error) {
+    //     console.error('Erro na requisição:', error);
+    //     alert('Erro ao acessar o sistema. Tente novamente.');
+    // }
   };
 
   const handleSubmitPlanilha = (e) => {
@@ -158,7 +160,7 @@ function ComponentsLogin() {
   };
 
   // Função para submissão de funcionário
-  const handleSubmitFuncionario = async (e) => {
+  const handleSubmitFuncionario =  (e) => {
     e.preventDefault();
     const clienteLink = document.getElementById("cliente-vinculado").value;
 
@@ -167,26 +169,26 @@ function ComponentsLogin() {
       return;
     }
 
-    try {
-        // Fazendo a requisição POST
-        const response = await fetch(clienteLink, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ variavel: `${clienteLink}` }),
-        });
+    // try {
+    //     // Fazendo a requisição POST
+    //     const response = await fetch(clienteLink, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ variavel: `${clienteLink}` }),
+    //     });
 
-        if (response.ok) {
-            window.location.href = clienteLink; // Redireciona após o POST
-        } else {
-            console.error('Erro ao enviar dados ao sistema:', response.statusText);
-            alert('Erro ao acessar o sistema. Tente novamente.');
-        }
-    } catch (error) {
-        console.error('Erro na requisição:', error);
-        alert('Erro ao acessar o sistema. Tente novamente.');
-    }
+    //     if (response.ok) {
+    //         window.location.href = clienteLink; // Redireciona após o POST
+    //     } else {
+    //         console.error('Erro ao enviar dados ao sistema:', response.statusText);
+    //         alert('Erro ao acessar o sistema. Tente novamente.');
+    //     }
+    // } catch (error) {
+    //     console.error('Erro na requisição:', error);
+    //     alert('Erro ao acessar o sistema. Tente novamente.');
+    // }
 
     window.location.href = clienteLink; // Redireciona para o link do cliente selecionado
   };
