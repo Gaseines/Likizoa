@@ -163,6 +163,7 @@ function ComponentsLogin() {
   const handleSubmitFuncionario =  (e) => {
     e.preventDefault();
     const clienteLink = document.getElementById("cliente-vinculado").value;
+    const senha = 12345
 
     if (!clienteLink) {
       setShowAlert(true);
@@ -176,7 +177,7 @@ function ComponentsLogin() {
     //         headers: {
     //             'Content-Type': 'application/json',
     //         },
-    //         body: JSON.stringify({ variavel: `${clienteLink}` }),
+    //         body: JSON.stringify({ senha: `${senha}` }),
     //     });
 
     //     if (response.ok) {
