@@ -161,12 +161,7 @@ function Parceiros() {
               src={ClientesImages.Baroncello}
               alt="Baroncello"
             />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Transmoor}
-              alt="Transmoor"
-            />
+            
             <img
               className={styles.img_clientes}
               draggable="false"
@@ -180,6 +175,7 @@ function Parceiros() {
               src={ClientesImages.EIL}
               alt="EIL"
             />
+
 
             <img
               className={styles.img_clientes}
@@ -199,7 +195,14 @@ function Parceiros() {
               src={ClientesImages.RTM}
               alt="RTM"
             />
+            <img
+              className={styles.img_clientes}
+              draggable="false"
+              src={ClientesImages.Comavix}
+              alt="Comavix"
+            />
           </div>
+
 
           <div className={styles.logo_clientes}>
             <img
@@ -288,24 +291,36 @@ function Parceiros() {
               src={ClientesImages.Froes}
               alt="Froes"
             />
+
             <img
               className={styles.img_clientes}
               draggable="false"
-              src={ClientesImages.Nardi}
-              alt="Nardi"
+              src={ClientesImages.Elo}
+              alt="Elo"
             />
+
+            <img
+              className={styles.img_clientes}
+              draggable="false"
+              src={ClientesImages.Sudden}
+              alt="Sudden"
+            />
+
+            
+            
             <p className={styles.img_clientes}>Evandro Transportes</p>
-            <p className={styles.img_clientes}>Transportes Paganini</p>
+            
           </div>
 
           <div className={styles.logo_clientes}>
             <p className={styles.img_clientes}>
               Renato Werner Transportes LTDA
             </p>
+            <p className={styles.img_clientes}>Transportes Paganini</p>
             <p className={styles.img_clientes}></p>
             <p className={styles.img_clientes}></p>
             <p className={styles.img_clientes}></p>
-            <p className={styles.img_clientes}></p>
+            
           </div>
         </div>
       </div>

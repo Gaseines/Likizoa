@@ -28,8 +28,11 @@ import Transcosta from './clientes/transcosta.png';
 import Kobrasol from './clientes/Kobrasol.png';
 import Barcellos from './clientes/Barcellos.png';
 import Froes from './clientes/Froes.png';
+import Elo from './clientes/Elo.png';
 import Nardi from './clientes/Nardi.png';
 import lfCargo from './clientes/lfCargo.png';
+import Comavix from './clientes/Comavix.png';
+import Sudden from './clientes/Sudden.png';
 
 export default{
   BC,
@@ -63,5 +66,8 @@ export default{
   Barcellos,
   Froes,
   Nardi,
-  lfCargo
+  lfCargo,
+  Elo,
+  Comavix,
+  Sudden
 };
