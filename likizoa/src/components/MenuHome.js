@@ -161,7 +161,7 @@ function MenuHome() {
                         <a href="#">Aplicativo</a>
                     </li>
                     <li className={styles.itens_menu} onClick={handleClick}>
-                        <Link to="/Login">Login</Link>
+                        <Link to="https://gaseines.github.io/sistema-likizoa/#/login">Login</Link>
                     </li>
                 </ul>
             </menu>

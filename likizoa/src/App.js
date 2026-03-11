@@ -14,7 +14,6 @@ import Contato from './components/sections/Contato';
 import Footer from './components/Footer';
 import NossaEmpresaPage from './components/pages/NossaEmpresaPage';
 import ScrollToTop from './components/ScrollToTop';
-import Login from './components/pages/Login';
 import Loader from './components/Loader'
 
 
@@ -51,7 +50,7 @@ function App() {
               </main>
             </>} />
             <Route path="/nossaEmpresa" element={<NossaEmpresaPage />} />
-            <Route path="/Login" element={<Login />} />
+            
           </Routes>
         
         <Footer />
