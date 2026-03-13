@@ -1,55 +1,127 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from "react";
 
-import styles from './IA.module.css'
-import stylesAni from './animacoes.module.css';
-import code from '../../image/CODE.png'
+import styles from "./IA.module.css";
+import code from "../../image/CODE.png";
 
-function IA(){
+function IA() {
+  const sectionRef = useRef(null);
 
-    const QRCodeRef = useRef(null) 
-    const textoRef = useRef(null)
+  useEffect(() => {
+    const elementos = sectionRef.current?.querySelectorAll("[data-animate]");
 
-    // animação Baixo para Cima
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(stylesAni.ani_BC);
-                }
-            });
-        };
+    if (!elementos || elementos.length === 0) return;
 
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
 
-        if (QRCodeRef.current) observer.observe(QRCodeRef.current);
-        if (textoRef.current) observer.observe(textoRef.current);
+    elementos.forEach((elemento) => observer.observe(elemento));
 
+    return () => observer.disconnect();
+  }, [styles.visible]);
 
-        return () => {
-            if (QRCodeRef.current) observer.unobserve(QRCodeRef.current);
-            if (textoRef.current) observer.unobserve(textoRef.current);
-        };
-    }, []);
+  return (
+    <section className={styles.secao} id="ia" ref={sectionRef}>
+      <div className={`containerPadrao ${styles.container}`}>
+        <div
+          className={`${styles.colunaConteudo} ${styles.fadeLeft}`}
+          data-animate
+        >
+          <span className={styles.badge}>Assistente com IA</span>
 
-    return(
-        <div className={styles.container_IA}>
-                <div className={styles.IA}>
-                    <div ref={textoRef} className={`${styles.texto_IA} ${styles.secao_IA}`}>
-                        <h1 className={styles.titulo_IA}>Assistente IA
-                            <p className={styles.desc_IA}>Inteligência Artificial</p>
-                        </h1>
-                        <p className={styles.escrita_IA}>Nossa empresa conta com uma inteligência artificial para solucionar suas
-                            duvidas, caso tenha ficado com alguma dúvida ou quer que seja explicado algum ponto de uma
-                            forma específica, acesse nosso assitente inteligente no link à baixo, ou escaneie o QR Code
-                        </p>
-                        <a className={styles.link_IA} href="https://chatgpt.com/g/g-adStloXb7-assitente-likizoa" target="_blank">Assistente inteligente...</a>
-                    </div>
-                    <div ref={QRCodeRef} className={`${styles.QRcode_IA} ${styles.secao_IA}`}>
-                        <img src={code} alt="" />
-                    </div>
-                </div>
+          <h2 className={styles.titulo}>
+            Um canal inteligente para tirar dúvidas com mais rapidez
+          </h2>
+
+          <p className={styles.descricao}>
+            A Likizoa também conta com um assistente inteligente para apoiar
+            clientes e visitantes com explicações rápidas sobre o serviço,
+            funcionamento da operação e pontos importantes relacionados ao
+            controle de jornada.
+          </p>
+
+          <p className={styles.descricaoSecundaria}>
+            Se você quiser entender melhor algum processo ou receber uma
+            explicação mais objetiva, pode acessar o assistente diretamente pelo
+            link ou usar o QR Code ao lado.
+          </p>
+
+          <div className={styles.gridRecursos}>
+            <article
+              className={`${styles.cardRecurso} ${styles.fadeUp}`}
+              data-animate
+            >
+              <strong>Respostas rápidas</strong>
+              <span>Apoio imediato para dúvidas frequentes</span>
+            </article>
+
+            <article
+              className={`${styles.cardRecurso} ${styles.fadeUp}`}
+              data-animate
+            >
+              <strong>Mais clareza</strong>
+              <span>Explicações objetivas sobre pontos importantes</span>
+            </article>
+
+            <article
+              className={`${styles.cardRecurso} ${styles.fadeUp}`}
+              data-animate
+            >
+              <strong>Acesso facilitado</strong>
+              <span>Link direto e leitura rápida por QR Code</span>
+            </article>
+          </div>
+
+          <div className={`${styles.acoes} ${styles.fadeUp}`} data-animate>
+            <a
+              className={styles.botaoPrincipal}
+              href="https://chatgpt.com/g/g-adStloXb7-assitente-likizoa"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar assistente inteligente
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={`${styles.colunaQr} ${styles.fadeRight}`}
+          data-animate
+        >
+          <div className={styles.cardQr}>
+            <div className={styles.topoQr}>
+              <span className={styles.tagQr}>Likizoa IA</span>
+              <span className={styles.statusQr}>Disponível online</span>
             </div>
-    )
+
+            <div className={styles.areaQr}>
+              <img
+                className={styles.imagemQr}
+                src={code}
+                alt="QR Code para acessar o assistente inteligente da Likizoa"
+              />
+            </div>
+
+            <div className={styles.rodapeQr}>
+              <strong>Escaneie o QR Code</strong>
+              <p>
+                Acesse o assistente pelo celular e receba apoio de forma simples
+                e rápida.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default IA
+export default IA;

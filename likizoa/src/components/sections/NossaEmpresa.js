@@ -1,80 +1,115 @@
-import React, { useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-
-import styles from './NossaEmpresa.module.css'
-import stylesAni from './animacoes.module.css';
-
-import notbook from '../../image/notbook.jpg'
+import styles from "./NossaEmpresa.module.css";
+import notbook from "../../image/notbook.jpg";
 
 function NossaEmpresa() {
+  const sectionRef = useRef(null);
 
-    const nossaEmpresa = useRef(null)
-    const imgRef = useRef(null)
+  useEffect(() => {
+    const elementos = sectionRef.current?.querySelectorAll("[data-animate]");
 
-    // animação Direita para Esquerda
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(stylesAni.ani_escrita_DE);
-                }
-            });
-        };
+    if (!elementos || elementos.length === 0) return;
 
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
 
-        if (nossaEmpresa.current) observer.observe(nossaEmpresa.current);
+    elementos.forEach((elemento) => observer.observe(elemento));
 
+    return () => observer.disconnect();
+  }, [styles.visible]);
 
-        return () => {
-            if (nossaEmpresa.current) observer.unobserve(nossaEmpresa.current);
-        };
-    }, []);
+  return (
+    <section className={styles.secao} id="nossa_empresa" ref={sectionRef}>
+      <div className={`containerPadrao ${styles.container}`}>
+        <div
+          className={`${styles.colunaImagem} ${styles.fadeLeft}`}
+          data-animate
+        >
+          <div className={styles.cardImagem}>
+            <img
+              className={styles.imagem}
+              src={notbook}
+              alt="Profissional utilizando notebook em ambiente corporativo"
+            />
 
-    // animação Esquerda para Direita
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(stylesAni.ani_escrita_ED);
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
-
-        if (imgRef.current) observer.observe(imgRef.current);
-
-
-        return () => {
-            if (imgRef.current) observer.unobserve(imgRef.current);
-        };
-    }, []);
-
-
-
-
-        return (
-            <div className={styles.container_nossa_empresa} id="nossa_empresa">
-                <div ref={imgRef} className={styles.container_img_nossa_empresa}>
-                    <img className={styles.img_nossa_empresa} src={notbook} alt="" />
-                </div>
-                <div ref={nossaEmpresa} className={styles.nossa_empresa}>
-                    <h1 className={styles.titulo_nossa_empresa}>Nossa Empresa</h1>
-                    <div className={styles.container_desc_nossa_empresa}>
-                        <p className={styles.texto_nossa_empresa}>A LIKIZOA oferece uma solução completa para o controle da jornada
-                            dos motoristas, automatizando o registro em tempo real de horários e pausas, reduzindo erros
-                            humanos e garantindo o cumprimento das regulamentações. A automação centraliza os dados,
-                            elimina a burocracia dos registros manuais e gera relatórios detalhados, permitindo uma
-                            análise profunda que otimiza o desempenho da frota e melhora a eficiência operacional.
-                        </p>
-                        <Link className={styles.link_nossa_empresa} to='/nossaEmpresa' >Ler mais...</Link>
-                    </div>
-                </div>
+            <div className={styles.imagemOverlay}>
+              <span className={styles.imagemTag}>Likizoa</span>
+              <p className={styles.imagemTexto}>
+                Organização, tecnologia e apoio para uma rotina mais segura.
+              </p>
             </div>
+          </div>
+        </div>
 
-        )
-    }
+        <div
+          className={`${styles.colunaConteudo} ${styles.fadeRight}`}
+          data-animate
+        >
+          <span className={styles.badge}>Nossa empresa</span>
 
-    export default NossaEmpresa
+          <h2 className={styles.titulo}>
+            Tecnologia e acompanhamento para uma operação mais organizada
+          </h2>
+
+          <p className={styles.descricao}>
+            A Likizoa atua com foco em controle de jornada e apoio operacional,
+            oferecendo uma estrutura que contribui para mais clareza nas
+            informações, mais segurança nos processos e mais eficiência no dia a
+            dia das empresas.
+          </p>
+
+          <p className={styles.descricaoSecundaria}>
+            Com uma abordagem prática e orientada à rotina real da operação,
+            ajudamos a reduzir falhas, organizar registros e melhorar o
+            acompanhamento das atividades com mais confiabilidade.
+          </p>
+
+          <div className={styles.listaDestaques}>
+            <article
+              className={`${styles.destaqueItem} ${styles.fadeUp}`}
+              data-animate
+            >
+              <strong>Atuação especializada</strong>
+              <span>Foco em controle de jornada e apoio operacional</span>
+            </article>
+
+            <article
+              className={`${styles.destaqueItem} ${styles.fadeUp}`}
+              data-animate
+            >
+              <strong>Processos mais claros</strong>
+              <span>Mais organização no acompanhamento das informações</span>
+            </article>
+
+            <article
+              className={`${styles.destaqueItem} ${styles.fadeUp}`}
+              data-animate
+            >
+              <strong>Mais confiança</strong>
+              <span>Rotinas mais seguras e melhor estruturadas</span>
+            </article>
+          </div>
+
+          <div className={`${styles.acoes} ${styles.fadeUp}`} data-animate>
+            <Link className={styles.botaoPrincipal} to="/nossaEmpresa">
+              Conhecer a Likizoa
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default NossaEmpresa;

@@ -1,61 +1,197 @@
-.container_parceiros {
-
-    background-color: var(--branco);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.secao {
+  position: relative;
+  padding: 96px 0;
+  background:
+    radial-gradient(circle at top right, rgba(5, 131, 242, 0.08), transparent 22%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  overflow: hidden;
 }
 
-.parceiros {
-    max-width: 1280px;
-    opacity: 0;
-    user-select: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.titulo_parceiros {
-    text-align: center;
-    font-family: 'padrao', sans-serif;
-    padding-top: 50px;
-    font-size: 2.5em;
+.topo,
+.itemLogo {
+  opacity: 0;
 }
 
-.carrossel_parceiros {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: rgba(5, 131, 242, 0.08);
+  border: 1px solid rgba(5, 131, 242, 0.14);
+  color: var(--azulEscuro);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
-
-.logo_clientes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 colunas */
-    grid-gap: 10px;
-    align-items: center;
-    justify-content: center;
-
+.titulo {
+  font-family: "padrao", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  max-width: 16ch;
+  color: var(--textPrimary);
+  margin-bottom: 16px;
 }
 
-
-.img_clientes {
-    width: 220px;
-    margin: 30px;
-    font-family: 'escrita', sans-serif;
-    font-size: 1.7em;
-    font-weight: bolder;
-    user-select: none;
-
+.descricao {
+  max-width: 760px;
+  color: var(--textSecondary);
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
-@media (max-width: 960px) {
+.gradeLogos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
 
-    .parceiros {
-        width: 100%;
-    }
+.itemLogo {
+  min-height: 132px;
+  padding: 20px 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
 
-    .img_clientes {
-        width: 150px;
-    }
+.itemLogo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 38px rgba(15, 23, 42, 0.08);
+  border-color: rgba(5, 131, 242, 0.16);
+  background: #ffffff;
+}
+
+.logoImagem {
+  width: 100%;
+  max-width: 190px;
+  max-height: 82px;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.logoTexto {
+  color: var(--textPrimary);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.fadeUp {
+  transform: translateY(24px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+@media (max-width: 1100px) {
+  .secao {
+    padding: 84px 0;
+  }
+
+  .titulo {
+    max-width: 100%;
+  }
+
+  .gradeLogos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .itemLogo {
+    min-height: 126px;
+  }
+}
+
+@media (max-width: 768px) {
+  .secao {
+    padding: 72px 0;
+  }
+
+  .titulo {
+    font-size: clamp(1.8rem, 8vw, 2.7rem);
+  }
+
+  .descricao {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .gradeLogos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .itemLogo {
+    min-height: 118px;
+    padding: 18px 14px;
+    border-radius: 20px;
+  }
+
+  .logoImagem {
+    max-width: 160px;
+    max-height: 70px;
+  }
+
+  .logoTexto {
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .gradeLogos {
+    grid-template-columns: 1fr;
+  }
+
+  .itemLogo {
+    min-height: 104px;
+  }
+
+  .logoImagem {
+    max-width: 170px;
+    max-height: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topo,
+  .itemLogo,
+  .fadeUp,
+  .visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .itemLogo:hover {
+    transform: none;
+  }
 }

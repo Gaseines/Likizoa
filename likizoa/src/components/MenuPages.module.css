@@ -1,42 +1,131 @@
 .header {
-    background-color: #006CE3;
-    padding: 10px 20px;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(6, 20, 42, 0.72);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(6, 20, 42, 0.92);
+  box-shadow: 0 16px 44px rgba(2, 8, 23, 0.18);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: min(calc(100% - 32px), 1200px);
+  min-height: 84px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
 }
 
-.logo img{
-    width: 180px;
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 168px;
+  height: auto;
+  display: block;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.voltar,
+.botaoSistema {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .voltar {
-    color: #0583F2;
-    font-size: 1rem;
-    background-color: #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-}
-
-.voltar i {
-    margin-right: 8px;
+  color: var(--branco);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .voltar:hover {
-    background-color: #0583F2;
-    color: #fff;
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
 }
 
-@media (max-width: 960px){
-    .logo img{
-        width: 120px;
-    }
+.botaoSistema {
+  color: var(--branco);
+  background: linear-gradient(135deg, var(--azulEscuro), var(--azulClaro));
+  box-shadow: 0 12px 30px rgba(5, 131, 242, 0.26);
+}
+
+.botaoSistema:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(5, 131, 242, 0.34);
+}
+
+.icone {
+  display: inline-block;
+  margin-right: 8px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: min(calc(100% - 20px), 1200px);
+    min-height: 76px;
+  }
+
+  .logo img {
+    width: 132px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .voltar,
+  .botaoSistema {
+    min-height: 42px;
+    padding: 0 14px;
+    font-size: 0.88rem;
+  }
+
+  .botaoSistema {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .voltar {
+    padding: 0 12px;
+  }
+
+  .icone {
+    margin-right: 6px;
+  }
 }

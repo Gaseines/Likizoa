@@ -1,24 +1,32 @@
-import React from "react"
+import React from "react";
 
-import styles from './NossaEmpresaPage.module.css'
+import styles from "./NossaEmpresaPage.module.css";
 
-import MenuPages from "../MenuPages"
-import NossaEmpresaSections from "../sectionsNossaEmpresa/NossaEmpresaSections"
-import ScrollToTop from "../ScrollToTop"
-
+import MenuPages from "../MenuPages";
+import NossaEmpresaSections from "../sectionsNossaEmpresa/NossaEmpresaSections";
+import ScrollToTop from "../ScrollToTop";
 
 function NossaEmpresaPage() {
+  return (
+    <div className={styles.pageShell}>
+      <ScrollToTop />
+      <MenuPages />
 
-    return (
+      <main className={styles.mainContent}>
+        <section className={styles.heroInterna}>
+          <div className={`containerPadrao ${styles.heroContainer}`}>
+            
 
-        <div className={styles.body}>
-            <ScrollToTop />
-            <MenuPages />
-            <NossaEmpresaSections />
-
+            <div className={styles.contentWrapper}>
+          <NossaEmpresaSections />
         </div>
+          </div>
+        </section>
 
-    )
+        
+      </main>
+    </div>
+  );
 }
 
-export default NossaEmpresaPage
+export default NossaEmpresaPage;

@@ -1,44 +1,99 @@
-:root{
-  --azulEscuro: #006CE3;
-  --azulClaro: #0583F2;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+:root {
+  --azulEscuro: #006ce3;
+  --azulClaro: #0583f2;
   --preto: #000000;
   --branco: #ffffff;
   --vintage: #fdf9e1;
   --cinza: #c3cef7;
+
+  --background: #f7f9fc;
+  --surface: #ffffff;
+  --surfaceSoft: #f3f7ff;
+  --textPrimary: #101828;
+  --textSecondary: #475467;
+  --textLight: rgba(255, 255, 255, 0.88);
+  --borderSoft: rgba(16, 24, 40, 0.08);
+  --shadowSoft: 0 12px 40px rgba(15, 23, 42, 0.08);
+  --shadowMedium: 0 20px 48px rgba(15, 23, 42, 0.14);
+  --container: 1200px;
+  --headerHeight: 88px;
+  --radiusMd: 18px;
+  --radiusLg: 24px;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
 
-html, body{
-  overflow-x: hidden;
-}
-
-html{
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
-body{
-  width: 100vw;
-  
-
-  background-color: var(--branco);
-
-  position: relative;
-  z-index: -2;
-    
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--textPrimary);
+  font-family: "escrita", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+#root {
+  min-height: 100vh;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+[id] {
+  scroll-margin-top: 110px;
+}
+
+::selection {
+  background-color: rgba(5, 131, 242, 0.18);
+  color: var(--textPrimary);
+}
+
+.containerPadrao {
+  width: min(calc(100% - 32px), var(--container));
+  margin: 0 auto;
+}
 
 @font-face {
-  font-family: 'padrao';
-  src: url('./fonts/coolvetica.otf');
+  font-family: "padrao";
+  src: url("./fonts/coolvetica.otf");
 }
 
 @font-face {
-  font-family: 'escrita';
-  src: url('./fonts/Roboto-Regular.ttf');
+  font-family: "escrita";
+  src: url("./fonts/Roboto-Regular.ttf");
 }

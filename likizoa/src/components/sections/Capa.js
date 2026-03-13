@@ -1,66 +1,90 @@
-import React, { useEffect, useRef } from 'react';
-
-import stylesAni from './animacoes.module.css';
-import styles from './Capa.module.css';
+import React from "react";
+import styles from "./Capa.module.css";
 
 function Capa() {
-    const nomeHomeRef = useRef(null);
-    const fraseHomeRef = useRef(null);
-    // animação Direita para Esquerda
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(stylesAni.ani_escrita_DE);
-                }
-            });
-        };
+  return (
+    <section className={styles.capa} id="capa">
+      <div className={styles.overlay}></div>
 
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
+      <div className={`containerPadrao ${styles.heroContainer}`}>
+        <div className={styles.heroContent}>
+          <span className={styles.badge}>
+            Soluções inteligentes em controle de jornada
+          </span>
 
-        if (nomeHomeRef.current) observer.observe(nomeHomeRef.current);
+          <div className={styles.textos}>
+            <p className={styles.kicker}>Likizoa Serviços e Treinamentos</p>
 
+            <h1 className={styles.titulo}>
+              Controle de jornada com clareza e segurança
+            </h1>
 
-        return () => {
-            if (nomeHomeRef.current) observer.unobserve(nomeHomeRef.current);
-        };
-    }, []);
+            <p className={styles.descricao}>
+              Organizamos processos, apoiamos a operação e entregamos mais
+              controle para empresas que precisam de segurança nas informações,
+              eficiência na rotina e conformidade no acompanhamento da jornada.
+            </p>
+          </div>
 
-    // animação Esquerda para Direita
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(stylesAni.ani_escrita_ED);
-                }
-            });
-        };
+          <div className={styles.acoes}>
+            <a
+              className={styles.botaoPrimario}
+              href="https://wa.me/5549999828876?text=Ol%C3%A1%21%20Estava%20Visitando%20O%20Site%20Da%20Likizoa%20E%20Gostaria%20De%20Mais%20Informa%C3%A7%C3%B5es."
+              target="_blank"
+              rel="noreferrer"
+            >
+              Solicitar atendimento
+            </a>
 
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
+            <a className={styles.botaoSecundario} href="#controle_jornada">
+              Conhecer soluções
+            </a>
+          </div>
 
-        if (fraseHomeRef.current) observer.observe(fraseHomeRef.current);
-
-
-        return () => {
-            if (fraseHomeRef.current) observer.unobserve(fraseHomeRef.current);
-        };
-    }, []);
-
-    return (
-        <div className={styles.capa} id="capa">
-            <div className={styles.home}>
-                <div ref={nomeHomeRef} className={styles.nome_home}>
-                    {/* <!-- Título principal e subtítulo --> */}
-                    <h1>Likizoa</h1>
-                    <p>Serviços e Treinamentos</p>
-                </div>
-                {/* <!-- Frase principal de destaque --> */}
-                <div ref={fraseHomeRef} className={styles.frase}>Gerenciando Horas, Entregando Confiança</div>
-            </div>
-            {/* <!-- Efeito visual de desfoque sobre a imagem de fundo --> */}
-            <div className={styles.blur}></div>
+          <ul className={styles.listaDestaques}>
+            <li>Atendimento especializado</li>
+            <li>Mais organização operacional</li>
+            <li>Confiabilidade nos processos</li>
+          </ul>
         </div>
-    );
+
+        <div className={styles.heroCard}>
+          <div className={styles.cardTopo}>
+            <span className={styles.cardTag}>Likizoa</span>
+            <span className={styles.cardStatus}>Atendimento profissional</span>
+          </div>
+
+          <div className={styles.cardConteudo}>
+            <h2 className={styles.cardTitulo}>
+              Gerenciando horas, entregando confiança
+            </h2>
+
+            <p className={styles.cardTexto}>
+              Uma estrutura pensada para empresas que precisam de mais controle,
+              organização e segurança na gestão da jornada.
+            </p>
+
+            <div className={styles.metricas}>
+              <div className={styles.metricaItem}>
+                <strong>Controle</strong>
+                <span>Processos mais organizados</span>
+              </div>
+
+              <div className={styles.metricaItem}>
+                <strong>Segurança</strong>
+                <span>Mais clareza nas informações</span>
+              </div>
+
+              <div className={styles.metricaItem}>
+                <strong>Confiança</strong>
+                <span>Atuação com foco em qualidade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Capa;

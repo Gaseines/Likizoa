@@ -1,172 +1,153 @@
-import React, { useEffect, useState, useRef } from "react"; // Importação de hooks do React
-import styles from "./MenuHome.module.css"; // Importa os estilos específicos para o componente
-import logo from "../image/logo.png"; // Importa a imagem do logo
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import styles from "./MenuHome.module.css";
+import logo from "../image/logo.png";
+
+const MENU_ITEMS = [
+  { label: "Início", href: "#capa" },
+  { label: "Soluções", href: "#controle_jornada" },
+  { label: "Nossa Empresa", href: "#nossa_empresa" },
+  { label: "Parceiros", href: "#parceiros" },
+  { label: "Contato", href: "#contatos" },
+];
 
 function MenuHome() {
-    const burguerRef = useRef(null); // Referência para o ícone de "hambúrguer" (menu)
-    const fecharRef = useRef(null); // Referência para o ícone de "fechar"
-    const menuRef = useRef(null); // Referência para o elemento <menu>
-    const listaMenuRef = useRef(null); // Referência para a lista de itens de menu
-    const navMenuRef = useRef(null); // Referência para o elemento <nav>
+  const [menuAberto, setMenuAberto] = useState(false);
+  const [headerAtivo, setHeaderAtivo] = useState(false);
 
-    const [fecharClass, setFecharClass] = useState(`${styles.fechado}`); // Classe do ícone de "fechar"
-    const [burguerClass, setBurguerClass] = useState(`${styles.burguer}`); // Classe do ícone de "hambúrguer"
-    const [fecharVisible, setfecharVisible] = useState(false); // Estado para saber se o menu está aberto
-
-    const tamanhoTela = () => {
-        if (window.innerWidth <= 1100) {
-            setBurguerClass(`${styles.burguer}`);
-            setFecharClass(`${styles.fechado}`);
-            if (menuRef.current) {
-                menuRef.current.style.height = '0%'; // Fecha o menu
-                listaMenuRef.current.style.display = 'none'; // Esconde a lista de itens do menu
-            }
-        } else {
-            if (menuRef.current) {
-                menuRef.current.style.height = '100px'; // Define a altura do menu
-                listaMenuRef.current.style.display = 'flex'; // Exibe a lista de itens do menu
-                listaMenuRef.current.style.opacity = 1; // Define a opacidade para 100%
-            }
-        }
+  useEffect(() => {
+    const handleScroll = () => {
+      setHeaderAtivo(window.scrollY > 24);
     };
 
-    useEffect(() => {
-        window.addEventListener('resize', tamanhoTela); // Adiciona o listener para redimensionamento da tela
-        tamanhoTela(); // Ajusta o menu ao carregar
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener('resize', tamanhoTela);
-        };
-    }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const handleClick = () => {
-        if (window.innerWidth < 1100) {
-            setfecharVisible(false);
-            if (menuRef.current) {
-                menuRef.current.style.height = '0%';
-                navMenuRef.current.style.height = '0%';
-            }
-            setTimeout(() => {
-                if (listaMenuRef.current) {
-                    listaMenuRef.current.style.opacity = 0;
-                    setBurguerClass(`${styles.burguer}`);
-                }
-            }, 200);
-            setTimeout(() => {
-                if (listaMenuRef.current) {
-                    listaMenuRef.current.style.display = 'none';
-                }
-            }, 700);
-        }
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setMenuAberto(false);
+      }
     };
 
-    const abrirMenu = () => {
-        setfecharVisible(true);
-        if (menuRef.current) {
-            menuRef.current.style.height = '100%';
-        }
-        setBurguerClass(`${styles.burguer} ${styles.giraCloseD}`);
-        setFecharClass(`${styles.fechado} ${styles.giraOpenD}`);
-        navMenuRef.current.style.height = '100%';
+    window.addEventListener("resize", handleResize);
 
-        setTimeout(() => {
-            if (listaMenuRef.current && fecharRef.current) {
-                listaMenuRef.current.style.display = 'block';
-                fecharRef.current.style.display = 'block';
-            }
-        }, 200);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-        setTimeout(() => {
-            if (listaMenuRef.current) {
-                listaMenuRef.current.style.opacity = 1; // Define a opacidade para 100%
-            }
-        }, 500);
+  useEffect(() => {
+    document.body.style.overflow = menuAberto ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
     };
+  }, [menuAberto]);
 
-    useEffect(() => {
-        const burguer = burguerRef.current;
-        if (burguer) {
-            burguer.addEventListener('click', abrirMenu);
-        }
+  const fecharMenu = () => setMenuAberto(false);
+  const alternarMenu = () => setMenuAberto((estadoAtual) => !estadoAtual);
 
-        return () => {
-            if (burguer) {
-                burguer.removeEventListener('click', abrirMenu);
-            }
-        };
-    }, [burguerClass]);
+  return (
+    <header
+      className={`${styles.nav_menu} ${headerAtivo ? styles.scrolled : ""}`}
+    >
+      <div className={styles.header}>
+        <a href="#capa" className={styles.brand} aria-label="Ir Para O Início">
+          <img className={styles.img_logo} src={logo} alt="Likizoa" />
+        </a>
 
-    const fecharMenu = () => {
-        if (menuRef.current) {
-            menuRef.current.style.height = '0%'
-        }
-        setFecharClass(`${styles.fechado} ${styles.giraCloseE}`)
-        navMenuRef.current.style.height = '0%'
-
-        setTimeout(() => {
-            listaMenuRef.current.style.opacity = '0%';
-            setBurguerClass(`${styles.burguer} ${styles.giraOpenE}`);
-        }, 200);
-
-        setTimeout(() => {
-            listaMenuRef.current.style.display = 'none';
-        }, 700);
-    };
-
-    useEffect(() => {
-        const fechar = fecharRef.current;
-        if (fechar) {
-            fechar.addEventListener('click', fecharMenu);
-        }
-
-        return () => {
-            if (fechar) {
-                fechar.removeEventListener('click', fecharMenu);
-            }
-        };
-    }, [fecharClass]);
-
-    // JSX corrigido
-    return (
-        <nav ref={navMenuRef} className={styles.nav_menu}>
-            <div className={styles.header}>
-                <a href="#welcome">
-                    <img className={styles.img_logo} src={logo} alt="Likizoa" />
+        <nav className={styles.desktop_nav} aria-label="Navegação Principal">
+          <ul className={styles.lista_menu}>
+            {MENU_ITEMS.map((item) => (
+              <li key={item.label} className={styles.itens_menu}>
+                <a className={styles.navLink} href={item.href}>
+                  {item.label}
                 </a>
-                <svg ref={burguerRef} className={burguerClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffffff" fill="none">
-                    <path d="M4 5L20 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M4 12L20 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M4 19L20 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <svg ref={fecharRef} className={fecharClass} style={{ display: fecharVisible ? 'block' : 'none' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
-                    <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            </div>
-            <menu ref={menuRef} className={styles.menu}>
-                <ul ref={listaMenuRef} className={styles.lista_menu}>
-                    <li className={styles.itens_menu} onClick={handleClick}>
-                        <a href="#capa">Início</a>
-                    </li>
-                    <li className={styles.itens_menu} onClick={handleClick}>
-                        <a href="#nossa_empresa">Nossa Empresa</a>
-                    </li>
-                    <li className={styles.itens_menu} onClick={handleClick}>
-                        <a href="#parceiros">Parceiros</a>
-                    </li>
-                    <li className={styles.itens_menu} onClick={handleClick}>
-                        <a href="#contatos">Contato</a>
-                    </li>
-                    <li className={styles.itens_menu} onClick={handleClick}>
-                        <a href="#">Aplicativo</a>
-                    </li>
-                    <li className={styles.itens_menu} onClick={handleClick}>
-                        <Link to="https://gaseines.github.io/sistema-likizoa/#/login">Login</Link>
-                    </li>
-                </ul>
-            </menu>
+              </li>
+            ))}
+          </ul>
         </nav>
-    );
+
+        <div className={styles.desktop_actions}>
+          <a
+            className={styles.secondaryButton}
+            href="https://wa.me/5549999828876?text=Ol%C3%A1%21%20Estava%20Visitando%20O%20Site%20Da%20Likizoa%20E%20Gostaria%20De%20Mais%20Informa%C3%A7%C3%B5es."
+            target="_blank"
+            rel="noreferrer"
+          >
+            Solicitar Atendimento
+          </a>
+
+          <a
+            className={styles.primaryButton}
+            href="https://gaseines.github.io/sistema-likizoa/#/login"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Acessar Sistema
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className={`${styles.mobile_toggle} ${
+            menuAberto ? styles.mobile_toggle_open : ""
+          }`}
+          onClick={alternarMenu}
+          aria-label={menuAberto ? "Fechar Menu" : "Abrir Menu"}
+          aria-expanded={menuAberto}
+        >
+          <span className={styles.mobile_toggle_bar}></span>
+          <span className={styles.mobile_toggle_bar}></span>
+          <span className={styles.mobile_toggle_bar}></span>
+        </button>
+      </div>
+
+      <div
+        className={`${styles.mobile_panel} ${
+          menuAberto ? styles.mobile_panel_open : ""
+        }`}
+      >
+        <nav aria-label="Menu Mobile">
+          <ul className={styles.mobile_menu}>
+            {MENU_ITEMS.map((item) => (
+              <li key={item.label} className={styles.mobile_item}>
+                <a
+                  className={styles.mobileLink}
+                  href={item.href}
+                  onClick={fecharMenu}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className={styles.mobile_actions}>
+            <a
+              className={styles.mobile_secondaryButton}
+              href="https://wa.me/5549999828876?text=Ol%C3%A1%21%20Estava%20Visitando%20O%20Site%20Da%20Likizoa%20E%20Gostaria%20De%20Mais%20Informa%C3%A7%C3%B5es."
+              target="_blank"
+              rel="noreferrer"
+              onClick={fecharMenu}
+            >
+              Falar No WhatsApp
+            </a>
+
+            <a
+              className={styles.mobile_primaryButton}
+              href="https://gaseines.github.io/sistema-likizoa/#/login"
+              
+              onClick={fecharMenu}
+            >
+              Acessar Sistema
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
 }
 
 export default MenuHome;

@@ -1,330 +1,112 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 import styles from "./Parceiros.module.css";
-import stylesAni from "./animacoes.module.css";
-
-//Importação correta das imagens
 import ClientesImages from "../../image/ClientesImages.js";
 
+const PARCEIROS = [
+  { tipo: "imagem", src: ClientesImages.BC, alt: "BC" },
+  { tipo: "imagem", src: ClientesImages.Saff, alt: "Saff" },
+  { tipo: "imagem", src: ClientesImages.Tac, alt: "Tac" },
+  { tipo: "imagem", src: ClientesImages.Beviani, alt: "Beviani" },
+  { tipo: "imagem", src: ClientesImages.Sanmartino, alt: "Sanmartino" },
+  { tipo: "imagem", src: ClientesImages.gh, alt: "GH" },
+  { tipo: "imagem", src: ClientesImages.Betel, alt: "Betel" },
+  { tipo: "imagem", src: ClientesImages.Simas, alt: "Simas" },
+
+  { tipo: "imagem", src: ClientesImages.MWM, alt: "MWM" },
+  { tipo: "imagem", src: ClientesImages.Baroncello, alt: "Baroncello" },
+  { tipo: "imagem", src: ClientesImages.smLog, alt: "SM Log" },
+  { tipo: "imagem", src: ClientesImages.EIL, alt: "EIL" },
+  { tipo: "imagem", src: ClientesImages.PTC, alt: "PTC" },
+  { tipo: "imagem", src: ClientesImages.GTL, alt: "GTL" },
+  { tipo: "imagem", src: ClientesImages.RTM, alt: "RTM" },
+  { tipo: "imagem", src: ClientesImages.Comavix, alt: "Comavix" },
+
+  { tipo: "imagem", src: ClientesImages.Portolog, alt: "Portolog" },
+  { tipo: "imagem", src: ClientesImages.Vibelog, alt: "Vibelog" },
+  { tipo: "imagem", src: ClientesImages.Dumaszak, alt: "Dumaszak" },
+  { tipo: "imagem", src: ClientesImages.Barcellos, alt: "Barcellos" },
+  { tipo: "imagem", src: ClientesImages.MGE, alt: "MGE" },
+  { tipo: "imagem", src: ClientesImages.Spiazzi, alt: "Spiazzi" },
+  { tipo: "imagem", src: ClientesImages.ComexCargo, alt: "Comex Cargo" },
+  { tipo: "imagem", src: ClientesImages.Kobrasol, alt: "Kobrasol" },
+
+  { tipo: "imagem", src: ClientesImages.Jomar, alt: "Jomar" },
+  { tipo: "imagem", src: ClientesImages.SemFronteiras, alt: "Sem Fronteiras" },
+  { tipo: "imagem", src: ClientesImages.Transcosta, alt: "Transcosta" },
+  { tipo: "imagem", src: ClientesImages.lfCargo, alt: "LF Cargo" },
+  { tipo: "imagem", src: ClientesImages.Froes, alt: "Froes" },
+  { tipo: "imagem", src: ClientesImages.Elo, alt: "Elo" },
+  { tipo: "imagem", src: ClientesImages.Sudden, alt: "Sudden" },
+
+  { tipo: "texto", texto: "Evandro Transportes" },
+  { tipo: "texto", texto: "Renato Werner Transportes LTDA" },
+  { tipo: "texto", texto: "Transportes Paganini" },
+];
+
 function Parceiros() {
-  const parceirosRef = useRef(null);
-  const sliderRef = useRef(null);
-
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  //Funções Mouse Slider
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const slider = sliderRef.current;
+    const elementos = sectionRef.current?.querySelectorAll("[data-animate]");
 
-    //Mouse Clicado e segurado
-    const mouseDown = (e) => {
-      setIsDown(true);
+    if (!elementos || elementos.length === 0) return;
 
-      slider.classList.add("active");
-      slider.style.cursor = "grabbing";
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.14 }
+    );
 
-      setStartX(e.pageX - slider.offsetLeft);
-      setScrollLeft(slider.scrollLeft);
-    };
+    elementos.forEach((elemento) => observer.observe(elemento));
 
-    //Mouse sai do Slider
-    const mouseLeave = () => {
-      setIsDown(false);
-      slider.style.cursor = "grab";
-    };
-
-    //Mouse solto
-    const mouseUp = () => {
-      setIsDown(false);
-      slider.style.cursor = "grab";
-    };
-
-    //Mouse em movimento
-    const mouseMove = (e) => {
-      if (!isDown) return;
-
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const anda = (x - startX) * 0.8;
-
-      slider.scrollLeft = scrollLeft - anda;
-    };
-
-    slider.addEventListener("mousedown", mouseDown);
-    slider.addEventListener("mouseleave", mouseLeave);
-    slider.addEventListener("mouseup", mouseUp);
-    window.addEventListener("mouseup", mouseUp);
-    slider.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      slider.removeEventListener("mousedown", mouseDown);
-      slider.removeEventListener("mouseleave", mouseLeave);
-      slider.removeEventListener("mouseup", mouseUp);
-      window.removeEventListener("mouseup", mouseUp);
-      slider.removeEventListener("mousemove", mouseMove);
-    };
-  });
-
-  // animação Baixo para Cima
-  useEffect(() => {
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(stylesAni.ani_BC);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.2,
-    });
-
-    if (parceirosRef.current) observer.observe(parceirosRef.current);
-
-    return () => {
-      if (parceirosRef.current) observer.unobserve(parceirosRef.current);
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [styles.visible]);
 
   return (
-    <div id="parceiros" className={styles.container_parceiros}>
-      <div className={styles.divisoria_parceiros}></div>
-      <div className={styles.divisoria_parceiros}></div>
-      {/*Seção Parceiros*/}
-      <div ref={parceirosRef} className={styles.parceiros}>
-        <h1 className={styles.titulo_parceiros}>Parceiros</h1>
-        <div ref={sliderRef} className={styles.carrossel_parceiros}>
-          <div className={styles.logo_clientes}>
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.BC}
-              alt="BC"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Saff}
-              alt="Saff"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Tac}
-              alt="Tac"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Beviani}
-              alt="Beviani"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Sanmartino}
-              alt="Sanmartino"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.gh}
-              alt="GH"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Betel}
-              alt="Betel"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Simas}
-              alt="Simas"
-            />
-          </div>
+    <section className={styles.secao} id="parceiros" ref={sectionRef}>
+      <div className={`containerPadrao ${styles.container}`}>
+        <div className={`${styles.topo} ${styles.fadeUp}`} data-animate>
+          <span className={styles.badge}>Parceiros</span>
 
-          <div className={styles.logo_clientes}>
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.MWM}
-              alt="MWM"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Baroncello}
-              alt="Baroncello"
-            />
-            
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.smLog}
-              alt="SM Log"
-            />
+          <h2 className={styles.titulo}>Empresas que confiam na Likizoa</h2>
 
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.EIL}
-              alt="EIL"
-            />
-
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.PTC}
-              alt="PTC"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.GTL}
-              alt="GTL"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.RTM}
-              alt="RTM"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Comavix}
-              alt="Comavix"
-            />
-          </div>
-
-
-          <div className={styles.logo_clientes}>
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Portolog}
-              alt="Portolog"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Vibelog}
-              alt="Vibelog"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Dumaszak}
-              alt="Dumaszak"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Barcellos}
-              alt="Barcellos"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.MGE}
-              alt="MGE"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Spiazzi}
-              alt="Spiazzi"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.ComexCargo}
-              alt="Comex Cargo"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Kobrasol}
-              alt="Kobrasol"
-            />
-          </div>
-
-          <div className={styles.logo_clientes}>
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Jomar}
-              alt="Jomar"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.SemFronteiras}
-              alt="Sem Fronteiras"
-            />
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Transcosta}
-              alt="Transcosta"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.lfCargo}
-              alt="LF Cargo"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Froes}
-              alt="Froes"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Elo}
-              alt="Elo"
-            />
-
-            <img
-              className={styles.img_clientes}
-              draggable="false"
-              src={ClientesImages.Sudden}
-              alt="Sudden"
-            />
-
-            
-            
-            <p className={styles.img_clientes}>Evandro Transportes</p>
-            
-          </div>
-
-          <div className={styles.logo_clientes}>
-            <p className={styles.img_clientes}>
-              Renato Werner Transportes LTDA
-            </p>
-            <p className={styles.img_clientes}>Transportes Paganini</p>
-            <p className={styles.img_clientes}></p>
-            <p className={styles.img_clientes}></p>
-            <p className={styles.img_clientes}></p>
-            
-          </div>
+          <p className={styles.descricao}>
+            Relacionamentos construídos com consistência, proximidade e
+            confiança operacional. Abaixo, os parceiros são apresentados na
+            mesma ordem da estrutura original do projeto.
+          </p>
         </div>
+
+        <ul className={styles.gradeLogos}>
+          {PARCEIROS.map((parceiro, index) => (
+            <li
+              key={`${parceiro.tipo}-${parceiro.alt || parceiro.texto}-${index}`}
+              className={`${styles.itemLogo} ${styles.fadeUp}`}
+              data-animate
+              style={{ "--delay": `${Math.min(index * 0.03, 0.42)}s` }}
+            >
+              {parceiro.tipo === "imagem" ? (
+                <img
+                  className={styles.logoImagem}
+                  src={parceiro.src}
+                  alt={parceiro.alt}
+                  draggable="false"
+                />
+              ) : (
+                <span className={styles.logoTexto}>{parceiro.texto}</span>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
+    </section>
   );
 }
 

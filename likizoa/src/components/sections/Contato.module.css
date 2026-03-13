@@ -1,61 +1,238 @@
-.container_contato{
-    background-color: var(--azulEscuro);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.secao {
+  position: relative;
+  padding: 96px 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(5, 131, 242, 0.22), transparent 26%),
+    linear-gradient(180deg, #071224 0%, #0a1b35 100%);
+  overflow: hidden;
 }
 
-.contato{
-    color: var(--branco);
-    max-width: 800px;
-    opacity: 0;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-.titulo_contato{
-    text-align: center;
-    font-family: 'padrao', sans-serif;
-    letter-spacing: 3px;
+.topo,
+.cardContato {
+  opacity: 0;
 }
 
-.desc_contato{
-    font-family: 'escrita', serif;
-    font-size: 1.3em;
-    text-align: center;
-    margin-top: 20px;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
-.container_numeros_contato{
-    display: flex;
-    font-family: 'escrita', serif;
-    font-size: 1.5em;
-    text-align: center;
-    justify-content: space-evenly;
-    margin-top: 50px;
+.titulo {
+  font-family: "padrao", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  max-width: 16ch;
+  color: var(--branco);
+  margin-bottom: 16px;
 }
 
-.link_whats{
-    text-decoration: none;
-    color: rgb(132, 206, 132);
-    margin-top: 10px;
+.descricao {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
-.link_whats:hover{
-    color: rgb(95, 161, 95);
+.gridContato {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-@media (max-width: 960px) {
+.cardContato {
+  padding: 26px 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 28px 60px rgba(2, 8, 23, 0.24);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
 
-    .container_numeros_contato{
-        font-size: 1.2em;
-    }
+.cardContato:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 70px rgba(2, 8, 23, 0.3);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.1);
+}
 
-    .numeros_contato{
-        width: 160px;
-        padding: 10px;
-    }
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 
+.cardTag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--branco);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
+.cardStatus {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cardTitulo {
+  font-family: "padrao", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.1;
+  color: var(--branco);
+  margin-bottom: 10px;
+}
+
+.cardInfo {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.cardTexto {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.botaoContato {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--azulEscuro), var(--azulClaro));
+  color: var(--branco);
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 34px rgba(5, 131, 242, 0.24);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.botaoContato:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 42px rgba(5, 131, 242, 0.32);
+}
+
+.fadeUp {
+  transform: translateY(26px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.gridContato .cardContato:nth-child(1).visible {
+  transition-delay: 0.08s;
+}
+
+.gridContato .cardContato:nth-child(2).visible {
+  transition-delay: 0.16s;
+}
+
+@media (max-width: 1100px) {
+  .secao {
+    padding: 84px 0;
+  }
+
+  .titulo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .secao {
+    padding: 72px 0;
+  }
+
+  .titulo {
+    font-size: clamp(1.8rem, 8vw, 2.7rem);
+  }
+
+  .descricao {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .gridContato {
+    grid-template-columns: 1fr;
+  }
+
+  .cardContato {
+    padding: 22px 20px;
+    border-radius: 24px;
+  }
+
+  .cardTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .botaoContato {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    font-size: 0.84rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topo,
+  .cardContato,
+  .fadeUp,
+  .visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .cardContato:hover,
+  .botaoContato:hover {
+    transform: none;
+  }
 }

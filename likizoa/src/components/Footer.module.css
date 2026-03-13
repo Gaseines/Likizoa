@@ -1,20 +1,19 @@
-footer {
-    background-color: black;
-    color: #fff;
-    font-size: 0.8em;
-    text-align: center;
-    padding: 5px;
-    position: absolute;
-    
-    width: 100%;
+.footer {
+  width: 100%;
+  padding: 22px 16px;
+  background: #08111f;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  font-size: 0.92rem;
 }
 
-.footer_link{
-    text-decoration: none;
-    color: var(--branco);
+.footer_link {
+  color: var(--branco);
+  font-weight: 600;
+  transition: opacity 0.25s ease;
 }
 
-.footer_link:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.footer_link:hover {
+  opacity: 0.8;
 }
