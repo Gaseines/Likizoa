@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d535df2ebcb0f993116a670bbe7a8ce1",
+    "revision": "f5d9a737a08ea6f53967fef83879527d",
     "url": "/index.html"
   },
   {
-    "revision": "633830e51163bcca7ce2",
-    "url": "/static/css/main.daf409c9.chunk.css"
+    "revision": "8741dd6b4528e7366178",
+    "url": "/static/css/main.a0d0c4ed.chunk.css"
   },
   {
-    "revision": "fed8bf0dffe36126a64f",
-    "url": "/static/js/2.0137fdee.chunk.js"
+    "revision": "1233cf3c3792d6979612",
+    "url": "/static/js/2.605061ce.chunk.js"
   },
   {
     "revision": "09dfcff8991931712817539b48cc9b6c",
-    "url": "/static/js/2.0137fdee.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.605061ce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2f25a8868fcb78970e1d",
-    "url": "/static/js/3.90d5657c.chunk.js"
+    "revision": "1827f24d9652e0f5148f",
+    "url": "/static/js/3.df971c99.chunk.js"
   },
   {
-    "revision": "633830e51163bcca7ce2",
-    "url": "/static/js/main.747fa1d6.chunk.js"
+    "revision": "8741dd6b4528e7366178",
+    "url": "/static/js/main.933650f2.chunk.js"
   },
   {
-    "revision": "2bf9b241b3b1fdb6fc76",
-    "url": "/static/js/runtime-main.f92c1f39.js"
+    "revision": "af40b0d613e092291466",
+    "url": "/static/js/runtime-main.833bd53c.js"
   },
   {
     "revision": "cc536fce18de507445a375d9b01a8c0c",
@@ -160,16 +160,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/capa_home.664bd970.jpg"
   },
   {
-    "revision": "0faa3dfd49e34343d1f3111452d623fd",
-    "url": "/static/media/capa_jornada.0faa3dfd.png"
-  },
-  {
     "revision": "3a039edde93ad79e42c722f1e64ba252",
     "url": "/static/media/coolvetica.3a039edd.otf"
-  },
-  {
-    "revision": "4c270a913f4b6b99dde68828b47fd418",
-    "url": "/static/media/fundo_com_linhas.4c270a91.jpg"
   },
   {
     "revision": "c41e609225cec4e776319636b25637a6",

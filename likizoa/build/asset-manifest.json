@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.daf409c9.chunk.css",
-    "main.js": "/static/js/main.747fa1d6.chunk.js",
-    "main.js.map": "/static/js/main.747fa1d6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f92c1f39.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f92c1f39.js.map",
-    "static/js/2.0137fdee.chunk.js": "/static/js/2.0137fdee.chunk.js",
-    "static/js/2.0137fdee.chunk.js.map": "/static/js/2.0137fdee.chunk.js.map",
-    "static/js/3.90d5657c.chunk.js": "/static/js/3.90d5657c.chunk.js",
-    "static/js/3.90d5657c.chunk.js.map": "/static/js/3.90d5657c.chunk.js.map",
+    "main.css": "/static/css/main.a0d0c4ed.chunk.css",
+    "main.js": "/static/js/main.933650f2.chunk.js",
+    "main.js.map": "/static/js/main.933650f2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.833bd53c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.833bd53c.js.map",
+    "static/js/2.605061ce.chunk.js": "/static/js/2.605061ce.chunk.js",
+    "static/js/2.605061ce.chunk.js.map": "/static/js/2.605061ce.chunk.js.map",
+    "static/js/3.df971c99.chunk.js": "/static/js/3.df971c99.chunk.js",
+    "static/js/3.df971c99.chunk.js.map": "/static/js/3.df971c99.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2a23842c78fb3966b9cc443e69027e31.js": "/precache-manifest.2a23842c78fb3966b9cc443e69027e31.js",
+    "precache-manifest.885ffd85a42f2d8d78a7649d8f4e8f3c.js": "/precache-manifest.885ffd85a42f2d8d78a7649d8f4e8f3c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.daf409c9.chunk.css.map": "/static/css/main.daf409c9.chunk.css.map",
-    "static/js/2.0137fdee.chunk.js.LICENSE.txt": "/static/js/2.0137fdee.chunk.js.LICENSE.txt",
+    "static/css/main.a0d0c4ed.chunk.css.map": "/static/css/main.a0d0c4ed.chunk.css.map",
+    "static/js/2.605061ce.chunk.js.LICENSE.txt": "/static/js/2.605061ce.chunk.js.LICENSE.txt",
     "static/media/BC.png": "/static/media/BC.cc536fce.png",
     "static/media/Barcellos.png": "/static/media/Barcellos.54677b2c.png",
     "static/media/Baroncello.png": "/static/media/Baroncello.60cd76b2.png",
@@ -47,8 +47,6 @@
     "static/media/Vibelog.png": "/static/media/Vibelog.157b6d9e.png",
     "static/media/caminhao_sol.jpg": "/static/media/caminhao_sol.960ae55e.jpg",
     "static/media/Capa.module.css": "/static/media/capa_home.664bd970.jpg",
-    "static/media/ControleJornada.module.css": "/static/media/capa_jornada.0faa3dfd.png",
-    "static/media/NossaEmpresa.module.css": "/static/media/fundo_com_linhas.4c270a91.jpg",
     "static/media/gh.png": "/static/media/gh.c41e6092.png",
     "static/media/lfCargo.png": "/static/media/lfCargo.a2ca8e24.png",
     "static/media/logo.png": "/static/media/logo.fc0760df.png",
@@ -59,9 +57,9 @@
     "static/media/transmoor.png": "/static/media/transmoor.0e1a207f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f92c1f39.js",
-    "static/js/2.0137fdee.chunk.js",
-    "static/css/main.daf409c9.chunk.css",
-    "static/js/main.747fa1d6.chunk.js"
+    "static/js/runtime-main.833bd53c.js",
+    "static/js/2.605061ce.chunk.js",
+    "static/css/main.a0d0c4ed.chunk.css",
+    "static/js/main.933650f2.chunk.js"
   ]
 }
