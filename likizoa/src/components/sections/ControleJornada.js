@@ -18,7 +18,7 @@ function ControleJornada() {
           }
         });
       },
-      { threshold: 0.18 }
+      { threshold: 0.18 },
     );
 
     elementos.forEach((elemento) => observer.observe(elemento));
@@ -57,9 +57,18 @@ function ControleJornada() {
             >
               Lei 13.103
             </a>
+            {" "}e{" "}
+            <a
+              className={styles.linkLei}
+              href="https://portal.stf.jus.br/processos/detalhe.asp?incidente=4778925"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ADI 5322
+            </a>
             , o registro da jornada dos motoristas deve ser feito de forma
-            contínua, considerando início e fim da jornada, pausas e períodos
-            de descanso.
+            contínua, considerando início e fim da jornada, pausas e períodos de
+            descanso.
           </p>
 
           <ul className={styles.listaBeneficios}>
@@ -91,7 +100,9 @@ function ControleJornada() {
           >
             <div className={styles.cardTop}>
               <span className={styles.cardEtiqueta}>Base legal</span>
-              <span className={styles.cardMiniTexto}>Lei 13.103</span>
+              <span className={styles.cardMiniTexto}>
+                Lei 13.103 <br /> ADI 5322
+              </span>
             </div>
 
             <h3 className={styles.cardTitulo}>
