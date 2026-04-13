@@ -33,6 +33,7 @@ import Nardi from './clientes/Nardi.png';
 import lfCargo from './clientes/lfCargo.png';
 import Comavix from './clientes/Comavix.png';
 import Sudden from './clientes/Sudden.png';
+import AJ from './clientes/AJ.png';
 
 export default{
   BC,
@@ -69,5 +70,6 @@ export default{
   lfCargo,
   Elo,
   Comavix,
-  Sudden
+  Sudden,
+  AJ
 };

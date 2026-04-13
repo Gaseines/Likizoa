@@ -12,6 +12,7 @@ const PARCEIROS = [
   { tipo: "imagem", src: ClientesImages.gh, alt: "GH" },
   { tipo: "imagem", src: ClientesImages.Betel, alt: "Betel" },
   { tipo: "imagem", src: ClientesImages.Simas, alt: "Simas" },
+  { tipo: "imagem", src: ClientesImages.AJ, alt: "AJ" },
 
   { tipo: "imagem", src: ClientesImages.MWM, alt: "MWM" },
   { tipo: "imagem", src: ClientesImages.Baroncello, alt: "Baroncello" },
@@ -27,12 +28,12 @@ const PARCEIROS = [
   { tipo: "imagem", src: ClientesImages.Dumaszak, alt: "Dumaszak" },
   { tipo: "imagem", src: ClientesImages.Barcellos, alt: "Barcellos" },
   { tipo: "imagem", src: ClientesImages.MGE, alt: "MGE" },
-  { tipo: "imagem", src: ClientesImages.Spiazzi, alt: "Spiazzi" },
+  
   { tipo: "imagem", src: ClientesImages.ComexCargo, alt: "Comex Cargo" },
-  { tipo: "imagem", src: ClientesImages.Kobrasol, alt: "Kobrasol" },
+  
 
   { tipo: "imagem", src: ClientesImages.Jomar, alt: "Jomar" },
-  { tipo: "imagem", src: ClientesImages.SemFronteiras, alt: "Sem Fronteiras" },
+  
   { tipo: "imagem", src: ClientesImages.Transcosta, alt: "Transcosta" },
   { tipo: "imagem", src: ClientesImages.lfCargo, alt: "LF Cargo" },
   { tipo: "imagem", src: ClientesImages.Froes, alt: "Froes" },
