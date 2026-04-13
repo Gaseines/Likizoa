@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.a0d0c4ed.chunk.css",
-    "main.js": "/static/js/main.a0d5a607.chunk.js",
-    "main.js.map": "/static/js/main.a0d5a607.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.833bd53c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.833bd53c.js.map",
-    "static/js/2.605061ce.chunk.js": "/static/js/2.605061ce.chunk.js",
-    "static/js/2.605061ce.chunk.js.map": "/static/js/2.605061ce.chunk.js.map",
-    "static/js/3.df971c99.chunk.js": "/static/js/3.df971c99.chunk.js",
-    "static/js/3.df971c99.chunk.js.map": "/static/js/3.df971c99.chunk.js.map",
+    "main.js": "/static/js/main.c375c4b2.chunk.js",
+    "main.js.map": "/static/js/main.c375c4b2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e387b5c7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e387b5c7.js.map",
+    "static/js/2.ea1eb140.chunk.js": "/static/js/2.ea1eb140.chunk.js",
+    "static/js/2.ea1eb140.chunk.js.map": "/static/js/2.ea1eb140.chunk.js.map",
+    "static/js/3.b9c098d6.chunk.js": "/static/js/3.b9c098d6.chunk.js",
+    "static/js/3.b9c098d6.chunk.js.map": "/static/js/3.b9c098d6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0325aac567143f5e0a336ad3dac625a1.js": "/precache-manifest.0325aac567143f5e0a336ad3dac625a1.js",
+    "precache-manifest.cb17c53780b290f1dacce3c4825aeadc.js": "/precache-manifest.cb17c53780b290f1dacce3c4825aeadc.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.a0d0c4ed.chunk.css.map": "/static/css/main.a0d0c4ed.chunk.css.map",
-    "static/js/2.605061ce.chunk.js.LICENSE.txt": "/static/js/2.605061ce.chunk.js.LICENSE.txt",
+    "static/js/2.ea1eb140.chunk.js.LICENSE.txt": "/static/js/2.ea1eb140.chunk.js.LICENSE.txt",
+    "static/media/AJ.png": "/static/media/AJ.ed01832c.png",
     "static/media/BC.png": "/static/media/BC.cc536fce.png",
     "static/media/Barcellos.png": "/static/media/Barcellos.54677b2c.png",
     "static/media/Baroncello.png": "/static/media/Baroncello.60cd76b2.png",
@@ -57,9 +58,9 @@
     "static/media/transmoor.png": "/static/media/transmoor.0e1a207f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.833bd53c.js",
-    "static/js/2.605061ce.chunk.js",
+    "static/js/runtime-main.e387b5c7.js",
+    "static/js/2.ea1eb140.chunk.js",
     "static/css/main.a0d0c4ed.chunk.css",
-    "static/js/main.a0d5a607.chunk.js"
+    "static/js/main.c375c4b2.chunk.js"
   ]
 }
